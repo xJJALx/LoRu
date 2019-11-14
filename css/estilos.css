@@ -1,0 +1,42 @@
+body{
+  background-color: darkslateblue;
+  background-size: cover;
+}
+header{
+  background-image: url(../img/fondo.jpg) ;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  height: 100vh;
+}
+section{
+  margin: 100px; 
+}
+article{
+  background-color: cornsilk;
+ box-shadow: 0px 0px 20px 0px #242225;
+}
+
+.parteCentral{
+   background-image: url(../img/2085405.jpg);
+  height: 500px;
+   background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+aside{
+  background-color: aliceblue;
+  box-shadow: 0px 0px 20px 0px #242225;
+}
+.botones{
+  position: absolute;
+  bottom: 10%;
+}
+
+img{
+   box-shadow: 0px 0px 12px 0px #242225;
+ 
+}
