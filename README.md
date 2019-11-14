@@ -1,5 +1,5 @@
 ###### Fecha creación del README: 13/11/2019
-##### Componentes del equipo: Rafael Ruiz, Jhon Aristizaba  
+##### Componentes del equipo: Rafael Ruiz, Jhon Aristizábal  
 ___
 ###### Actualizado 14/11/2019 14:00  
 
