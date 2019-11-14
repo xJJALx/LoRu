@@ -12,10 +12,10 @@ Este es el vistazo principal de nuestro apartado de Cardboard.
 ![primeraImagen](imagesREADME/14_11_2019_1.png)  
 
 Dentro del Cardboard se pueden apreciar las distintas secciones, entre las que se encuentran:  
--Tareas por hacer  
--En progreso  
--Hecho, necesario Revisar  
--Terminado, perfecto
+- Tareas por hacer  
+- En progreso  
+- Hecho, necesario Revisar  
+- Terminado, perfecto
 ![primeraImagen](imagesREADME/14_11_2019_2.png)  
 
 
