@@ -1,3 +1,4 @@
+
 .menu-fijo {
     width: 100%;
     background: #312450;
@@ -9,6 +10,7 @@
     top: 0px;
     border-bottom: solid 3px rgba(255, 255, 255, 0.75);
 }
+
 label > h1 {
     color: rgba(255, 255, 255, 0.75);
 }
