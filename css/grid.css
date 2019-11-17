@@ -1,0 +1,58 @@
+header{
+  background-image: url(../img/fondo.jpg) ;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  height: 100vh;
+}
+
+
+img:hover{
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1); /* escalado de imagen para aumentar */
+  box-shadow: 0 4px 16px #DD0E4E; /* sombra detrás de la imagen */
+
+}
+
+section > div{
+  box-shadow: 0 4px 16px #23A0D0;
+}
+
+
+
+
+
+/*PESTAÑAS*/
+input, .content {
+  display: none;
+  background-color: #C39BD3 ;
+  padding: 5px 25px;
+  color: #000;
+  border-radius: 6px;
+
+
+}
+
+#one:checked ~ .one,
+#two:checked ~ .two,
+#three:checked ~ .three {
+  display: block;}
+
+label {
+  cursor: pointer;
+  background: #D7DBDD;
+  padding: 5px;
+  display: inline-block;
+  text-align: center;
+  color: #000;
+  font: normal 1em/150% Sans-Serif;
+                /* Opcional */ 
+}
+
+label:hover, input:checked + label {background-color: #C39BD3 ;}
+

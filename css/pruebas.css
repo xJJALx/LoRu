@@ -1,0 +1,85 @@
+body{
+  background-color: darkslateblue;
+  background-size: cover;
+}
+
+h1{
+  color: white;
+  margin: 50px;
+}
+
+header{
+  background-image: url(../img/fondo.jpg) ;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  height: 100vh;
+}
+section{
+  margin: 100px; 
+}
+article{
+  background-color: cornsilk;
+ box-shadow: 0px 0px 20px 0px #242225;
+}
+
+.parteCentral{
+   background-image: url(../img/2085405.jpg);
+  height: 500px;
+   background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+aside{
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px 0px #242225;
+}
+.botones{
+  position: absolute;
+  bottom: 10%;
+}
+
+img{
+   box-shadow: 0px 0px 12px 0px #242225;
+ 
+}
+
+
+
+/* CARDS */
+
+card{
+  margin: 20px;
+}
+.card img:hover{
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1); /* escalado de imagen para aumentar */
+  box-shadow: 0 4px 16px red; /* sombra detrás de la imagen */
+ 
+}
+
+.boton{
+  color: #0099CC;
+  background: transparent;
+
+}
+
+.boton:hover{
+  background-color: #008CBA;
+  color: white;
+  box-shadow: 0 4px 16px black;
+  transition: all 0.2s ease;
+}
+
+/* !!! Parte de esta linea probablemente esté en el index*/
+section, .row{
+  margin: 20px;
+}
+
