@@ -1,6 +1,4 @@
-* {
-    transition: all 0.5s ease-in;
-}
+
 .sidebar {
   position: fixed;
   width: 350px;
@@ -18,11 +16,44 @@ input[type="checkbox"]{
 
 
 /* Usamos el selector hermano general para cuando esté activado el input despliege el nav*/
+
+
+
 input[type="checkbox"]:checked ~ nav{
   transition-duration: 1.0s;
   transform: translateX(350px);
-  opacity: 
+     opacity: 0.9;
+    section{
+      filter: blur(6px);
+    }
 }
+
+
+
+#animateList a {
+    cursor: pointer;
+    -webkit-transition: padding-left 250ms ease-out;
+    -moz-transition: padding-left 250ms ease-out;
+}
+
+#animateList a:hover {
+    padding-left: 10px;   
+}
+
+
+
+
+<div class="col-4 p-0 bd-highlight order-5 botonesPlay">
+                <a class="movies" href="https://x-madrid.com/playcategory/movies/">
+                  <img class="img2" src="https://x-madrid.com/wp-content/uploads/2019/09/palomitas.gif" alt="Movies" srcset="" sizes="(max-width: 768px) 30vw, 300px" style="transform: matrix(1, 0, 0, 1, 0, 0);">
+                  <img class="img1" src="https://x-madrid.com/wp-content/uploads/2019/07/movies2.jpg" alt="Movies" srcset="/wp-content/uploads/2019/07/movies2.jpg 500w, /wp-content/uploads/2019/07/movies2-300x293.jpg 300w" sizes="(max-width: 768px) 30vw, 300px">
+
+                  <div class="name">
+                    <span>Movies</span>
+                  </div>
+                </a>
+</div>
+             
 
 
 
@@ -74,9 +105,6 @@ nav ul li::after {
   bottom: 0;
   background-image: linear-gradient(to right, #5e42a6, #b74e91); /*Linea efecto degradado*/
 }
-
-
-
 
 
 

@@ -9,6 +9,7 @@
     position: sticky; /* Si lo queremos que nos acompañe al hacer scrooll*/
     top: 0px;
     border-bottom: solid 3px rgba(255, 255, 255, 0.75);
+
 }
 
 label > h1 {
@@ -20,6 +21,7 @@ label > h1 {
     margin: 0 1.5rem;
     text-decoration: none;
 }
+
 
 
 
