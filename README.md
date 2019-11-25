@@ -87,27 +87,3 @@ Para la próxima reunión queremos tener completa la unión de ambas barras y el
 
 ###### Actualizado 17/11/2019 20:30 
 ___
-
-###### Actualizado 19/11/2019 23:30 
-
-## Reunión 2.
-
-Hemos aplazado la reunión de ayer principalmente porque vamos bastante adelantados en el proyecto, llevamos más del 70% aproximadamente de la práctica porque tenemos la mayoría de componentes hechos y algunos de ellos ya implementados en una página conjunta. Ahora estamos trabajando en seguir mejorando los componentes actuales y sobretodo: poner énfasis en que no sea todo monótono (no hacer copia y pega entre todos los componentes) y añadir animaciones para que sea atractiva visualmente. Tenemos por delante 12/13 días hasta la fecha de entrega de la práctica por lo que no es necesario obligarnos si no nos apetece diseñar.    
-
-De la reunión pasada hemos completado ambas barras de navegación, tanto la horizontal como la vertical y las hemos unido en una misma página, permaneciendo esta última oculta y haciéndose visible cuando queramos, por lo que movemos esta tarjeta a "hecho, necesario revisar", aunque hemos añadido a "tareas por hacer" la de añadir un hover a la barra de navegacion horizontal, que lo haremos mas adelante para que sea semejante al resto de la gama de la página.    
-
-Hemos añadido a la columna "Ideas" del cardboard la tarjeta de cambiar el cursor, ya que hemos navegado por una página que lo tenía implementado y nos ha parecido interesante, aunque lo hemos intentado implementar, tras un rato de testeo no ha resultado efectivo y lo hemos descartado por ahora. También hemos añadido que los títulos de los componentes sean sticky (que se anclen a la barra superior al desplazarnos por dicho componente), una muestra de imagenes que al pasar el raton por encima que se anime un gif, y por último para la columna "ideas" es la de hacer una caricatura nuestra tipo tarjeta de contacto / autor de la web en el footer de la página.    
-
-Actualmente seguimos trabajando en el componente del panel de información emergente, a la vez que creamos uno nuestro propio para mostrar una alerta.  
-También estamos diseñando el modelo con el que vamos a mostrar el código (css,html,js) de nuestros componentes en la página web, optando por uno de ventanas / pestañas deslizables.    
-
-Tenemos además: un background fijo con un panel deslizable encima transparente, que nos ha resultado interesante probar; unos botones para desplegar un panel en la parte inferior temporal o fijo y unos gifs animados que además son interactivos en cuanto a hover se refiere.  
-Este sería nuestro resumen del cardboard actual:
-
-![segundaImagen](imagesREADME/19_11_2019.png)    
-
-Este sería el trabajo y la reunión realizada hoy. Estamos reuniendonos cada dos días y nos está funcionando bastante bien así que intentaremos seguir con este ritmo hasta el final.  
-
-
-###### Actualizado 17/11/2019 20:30 
-___
