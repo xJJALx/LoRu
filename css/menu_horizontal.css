@@ -1,4 +1,16 @@
+.rotulo{
+  background-color: #eee;
+  height: 25vh;
+}
 
+.rotulo h1, .rotulo p{
+  padding-top: 1.3em;
+  margin: auto;
+}
+
+:root{
+  box-sizing: content-box;
+}
 .menu-fijo {
     z-index: 1;
     width: 100%;
