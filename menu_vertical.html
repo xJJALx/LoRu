@@ -1,142 +1,31 @@
+<!DOCTYPE html>
+<!-- Comentario -->
 
-.sidebar {
-  position: fixed;
-  width: 350px;
-  left: -350px;
-  height: 100vh;
-  background: #312450;
-  z-index: 100; /*para que esté siempre por encima de cualquier contenido*/
-}
+<html lang="es">
+  <head>
+    <title>Web</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Mi web">
+    <meta name="author" content="Jhon">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/menu_vertical.css">    
+  </head>
 
-input[type="checkbox"]{
-  display: none; /*ocultamos la casilla check*/
+  <body>
 
-}
+    
+    <input type="checkbox" id="check">
+    <label for="check"><img src="img/menu.png"></label>
 
-
-
-/* Usamos el selector hermano general para cuando esté activado el input despliege el nav*/
-input[type="checkbox"]:checked ~ nav{
-  transition-duration: 1.0s;
-  transform: translateX(350px);
-     opacity: 0.9;
-    section{
-      filter: blur(6px);
-    }
-}
-
-
-
-nav ul {
-  list-style: none;
-}
-
-a:link {
-  text-decoration:none;
-}
-
-/*Posicionamos los elementos lista respecto al flujo normal de la página, esto es
-importante ya que sino luego con after no se ven las lineas de separación*/
-nav ul li { 
-  position: relative;
-}
-
-/*Estilos de los links*/
-nav ul li a {
-  line-height: 5em; /* aumentamos la separacion del texto de la lista*/
-  text-transform: uppercase;
-  letter-spacing: 0.4em;
-  color: aqua;
-}
-
-/*Color del link activo ¿QUITAR? */
-nav ul li.active a {
-  color: white;
-}
-
-/*¿QUITAR? ESTO VUELVE A LAS LINEAS DE COLORES DEL AFTER NO ACTIVE  MAS CLARAS*/
-nav ul li:not(.active)::after {
-  opacity: 0.3;
-}
-
-/* color del link al posicionarnos encima menos en el active* QUITAR??????????*/
- li:not(.active):hover a {
-  color: rgba(255, 255, 255, 0.75);
-}
-
-
-nav ul li::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 4%; /* Altura de content, como es un color lo que le damos podemos jugar y hacer lineas o un fondo por detrás, pero interfiere con el .active*/
-  left: 0; /* valores para que no se desplacen al lado del texto y se salga del nav*/
-  bottom: 0;
-  background-image: linear-gradient(to right, #5e42a6, #b74e91); /*Linea efecto degradado*/
-}
-
-
-
-
-
-
-
-
-
-
-/*CODIGO ORIGINAL REFACTORIZADO
-
-.sidebar {
-  position: fixed;
-  width: 350px;
-  left: -350px;
-  height: 100vh;
-  background: #312450;
-  font-size: 0.65em;
-  z-index: 100;
-}
-
-input[type="checkbox"]:checked ~ aside{
-  transform: translateX(350px);
-}
-
-.nav {
-  position: relative;
-  margin: 0 15%;
-  text-align: right;
-  font-weight: bold;
-}
-
-.nav ul {
-  list-style: none;
-}
-.nav ul li {
-  position: relative;
-  margin: 3.2em 0;
-}
-.nav ul li a {
-  line-height: 5em;
-  text-transform: uppercase;
-  text-decoration: none;
-  letter-spacing: 0.4em;
-  color: rgba(255, 255, 255, 0.35);
-  display: block;
-}
-.nav ul li.active a {
-  color: white;
-}
-.nav ul li:not(.active)::after {
-  opacity: 0.2;
-}
-.nav ul li:not(.active):hover a {
-  color: rgba(255, 255, 255, 0.75);
-}
-.nav ul li::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 0.2em;
-  left: 0;
-  bottom: 0;
-  background-image: linear-gradient(to right, #5e42a6, #b74e91);
-}*/
+    <nav class="sidebar">
+      <ul>
+        <li class="active"><a href="#">Welcome</a></li>
+        <li><a href="#par">Who We Are</a></li>
+        <li><a href="#">What We Do</a></li>
+        <li><a href="#">Get In Touch</a></li>
+      </ul>
+    </nav>
+    
+  </body>
+</html>
