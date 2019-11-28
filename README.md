@@ -22,7 +22,7 @@ Así quedaría nuestro Cardboard actualmente:
 Tras la reunión numero 1, la primera de muchas, hemos avanzado gran parte del proyecto en temas de desarrollo y planificación de cara a futuro.      
    
 Para empezar, hemos pensado que es buena idea hacer los componentes en páginas separadas, para testear libremente y para tener menos líneas de código, para ser más precisos a la hora de escribir nuevas o cambiar continuamente la página.  
-Hemos empezado dialogando de por qué componente empezar, optando por los botones y la carta con la imagen. Lo hicimos por separado; los botones con hover y varios estados en el fichero llamado buttons.html con su respectivo buttons.css, y la carta con el fichero llamado card.html y card.css.  
+Hemos empezado dialogando de por qué componente empezar, optando por los botones y la carta con la imagen. Lo hicimos por separado. Los botones con hover y varios estados en el fichero llamado buttons.html con su respectivo buttons.css, y la carta con el fichero llamado card.html y card.css.  
 Los códigos creados por separado seran juntados al final con el fin de crear una sola página homogénea para entregarla con las directrices pedidas en el enunciado.
 
 Hemos actualizado la pestaña de los cardboards, en la que hemos añadido nuevas columnas, las cuales son:  
@@ -36,7 +36,7 @@ En la columna nueva "Ideas" hemos añadido los checkbox que queremos utilizar di
 En tareas por hacer hemos añadido el nombre de cada uno de los componentes que hay que realizar, ya que al principio no lo hicimos, y hemos desplazado a "en progreso" en los que estamos trabajando, que son los botones y la tarjeta con imagen.  
 
 Este sería un resumen de la última actualización del cardboard:
-![segundaImagen](imagesREADME/14_11_2019_3.png)  
+![terceraImagen](imagesREADME/14_11_2019_3.png)  
 
 
 Y por este día de trabajo y reunión hemos avanzado bastante. Siguiente reunión programada para el día 15/11/2019. Para entonces queremos tener terminados los componentes de los botones y las tarjetas.
@@ -81,9 +81,96 @@ Hoy hemos estado trabajando conjuntamente en los componentes que dejamos a media
 Aun así, hemos terminado las barras de navegación, en lo que a la estructura de cada una de ellas se refiere, falta terminar de retocar pequeños detalles y colores, y juntarlas para que una de ellas sea desplegable, por lo que esta última tarea para a la seccion "Tareas por hacer" y las barras, como no vamos a seguir modificándolas por ahora, pasan ambas a "Hecho".    
 
 Vamos a añadir hoy la foto que no pusimos en la reunión de ayer ya que hemos modificado hoy cosas y no sería cronológico:  
-![segundaImagen](imagesREADME/17_11_2019.png)    
+![cuartaImagen](imagesREADME/17_11_2019.png)    
 
 Para la próxima reunión queremos tener completa la unión de ambas barras y el componente del panel de información desplegable con el botón.
 
 ###### Actualizado 17/11/2019 20:30 
 ___
+
+###### Actualizado 19/11/2019 23:30 
+
+## Reunión 3.
+
+Hemos aplazado la reunión de ayer principalmente porque vamos bastante adelantados en el proyecto, llevamos más del 70% aproximadamente de la práctica porque tenemos la mayoría de componentes hechos y algunos de ellos ya implementados en una página conjunta. Ahora estamos trabajando en seguir mejorando los componentes actuales y sobretodo: poner énfasis en que no sea todo monótono (no hacer copia y pega entre todos los componentes) y añadir animaciones para que sea atractiva visualmente. Tenemos por delante 12/13 días hasta la fecha de entrega de la práctica por lo que no es necesario obligarnos si no nos apetece diseñar.    
+
+De la reunión pasada hemos completado ambas barras de navegación, tanto la horizontal como la vertical y las hemos unido en una misma página, permaneciendo esta última oculta y haciéndose visible cuando queramos, por lo que movemos esta tarjeta a "hecho, necesario revisar", aunque hemos añadido a "tareas por hacer" la de añadir un hover a la barra de navegacion horizontal, que lo haremos mas adelante para que sea semejante al resto de la gama de la página.    
+
+Hemos añadido a la columna "Ideas" del cardboard la tarjeta de cambiar el cursor, ya que hemos navegado por una página que lo tenía implementado y nos ha parecido interesante, aunque lo hemos intentado implementar, tras un rato de testeo no ha resultado efectivo y lo hemos descartado por ahora. También hemos añadido que los títulos de los componentes sean sticky (que se anclen a la barra superior al desplazarnos por dicho componente), una muestra de imagenes que al pasar el raton por encima que se anime un gif, y por último para la columna "ideas" es la de hacer una caricatura nuestra tipo tarjeta de contacto / autor de la web en el footer de la página.    
+
+Actualmente seguimos trabajando en el componente del panel de información emergente, a la vez que creamos uno nuestro propio para mostrar una alerta.  
+También estamos diseñando el modelo con el que vamos a mostrar el código (css,html,js) de nuestros componentes en la página web, optando por uno de ventanas / pestañas deslizables.    
+
+Tenemos además: un background fijo con un panel deslizable encima transparente, que nos ha resultado interesante probar, unos botones para desplegar un panel en la parte inferior temporal o fijo y unos gifs animados que además son interactivos en cuanto a hover se refiere.  
+Nuestro resumen del cardboard actual queda así:
+
+![quintaImagen](imagesREADME/19_11_2019.png)    
+
+Este sería el trabajo y la reunión realizada hoy. Estamos reuniendonos cada dos días y nos está funcionando bastante bien así que intentaremos seguir con este ritmo hasta el final.  
+
+###### Actualizado 19/11/2019 23:30 
+___
+
+###### Actualizado 21/11/2019 23:55
+
+## Reunión 4.
+
+Esta reunión no la hemos dedicados a debatir sobre el proyecto en general, si no que nos hemos centrado en los componentes y hemos avanzado en ellos y perfeccionándolos.    
+
+Hemos estado trabajando en el componente del panel de información que resalte del resto del texto. Este le queremos hacer oculto y que aparezca al pinchar un botón, para ello aplicaremos algo de Javascript básico. Está casi terminado pero falta amoldarlo a la estructura que tenemos de la página en cuanto a formato y colores, pero el esqueleto esta testeado y funciona bien.    
+
+En el cardboard no hemos modificado nada, simplemente hemos añadido a la columna "Ideas" la tarjeta de añadir una especie de estadística del codigo y el lenguaje que hemos utilizado mediante gráficos.
+
+Como hemos hablando en clase, el bootstrap era solo orientativo, para reflejar la nomenclatura que usa para sus clases y nosotros estábamos utilizando cosas implementadas. Por eso al componente card se le han quitado las clases bootstrap y se han añadido clases propias que harán cosas similares.    
+
+Poco a poco también estamos añadiendo todos los componentes que vamos probando y testeando al archivo menu_horizontal.html, que a partir de ahora pasa a llamarse index.html.  
+Faltaría refactorizar y mejorar el css en cuanto a estructura general, limpieza y sintaxis homogénea.    
+
+El resto de tiempo hemos estado probando efectos interesantes y animaciones que poder meter a los componentes ya creados con fin de mejorar la estética final.    
+
+Por puntualizar, hemos cambiado el editor de trabajo que teníamos, pasando de la aplicación de "Sublime Text 3" a "Brackets". Esta última esta muy dedicada a CSS y HTML, permitiendonos cambiar cosas en los archivos a tiempo real, al igual que los fallos o errores, ver componentes asociados, a que linea se hacer referencia cada elemento en la página al selecionarlo...  
+Este cambio ha sido la consecuencia de la aparición de varios errores de apertura de ficheros o de colocación de las carpetas y la ruta de los mismos, por lo que hemos perdido un poco de tiempo, pero para el futuro nos ahorrará trabajo y nos facilitará otras cosas.    
+
+Por último y por añadir también, somos los que más avanzados llevamos el proyecto, en base a las estadísticas que nos ha proporcionado el profesor de la asignatura. Este dato nos ha motivado sabiendo que lo llevamos bien y nos va a ayudar a seguir trabajando para mantener esa posición ficticia a lo largo de todo el proyecto, hasta la fecha de entrega.    
+
+Como no hemos modificado casi nada del Cardboard no vamos a añadir captura en esta reuunión.  
+Para el escaso tiempo que hemos dedicado hoy hemos mejorado bastante y ya vamos teniendo cosas más claras con visión al trabajo terminado.  
+
+
+###### Actualizado 21/11/2019 23:55
+___
+
+###### Actualizado 25/11/2019 23:50
+
+## Reunión 5.
+
+Durante este fin de semana hemos estado trabajado por separado porque no hemos podido coincidir para programar juntos. Además tenemos próximamente examenes y hay que repartir el tiempo en otras asignaturas. Quedan 6 días para entregar el proyecto y solo nos queda por hacer el componente de la paginación.    
+
+El componente card / tarjeta está terminado prácticamente y ya tenemos pensado la forma de presentar dicho componente. Se han optimizado los estilos y el codigo html,  ya que posiblemente no se hagan cambios en este o solamente se implementen pequeñas mejoras visuales.   
+
+El componente de tablón de efecto cristal opaco se encuentra en su fase prefinal porque necesita una pequeña refectorización del código e indentado, pero no se modificará más en dicho apartado. Tenemos pensado utilizarlo conjunto a las tarjetas de presentación para mostrar y explicar su código.    
+
+Por último se ha creado un div con un fondo y dos componente que ya se puede añadir al index, su diseño es casi definitivo, se han usado las tarjetas y debajo un tablón con pestañas explicando el código utilizado. Aunque está en su fase pre-final puede sufrir cambios antes de implementarlo en el index.    
+
+Dentro del cardboard, hemos añadido a "en progreso" el componente del cristal transparente, y el componente de paginación, que será lo próximo con lo que empecemos a trabajar. La tarjeta y el panel de información emergente se han desplazado a "Hecho, necesario revisar".  
+A "Tareas por hacer" hemos añadido Aplicar boxsizing heredado o no, para ver como funciona nuestra página y adornar nuestro código e identar todo nuestro código para el mismo fin que el anterior. Por último, queremos añadir unos índices para navegar dentro del documento que se encuentren en un partado desplegable en el menú para que sean rápidamente accesibles.  
+Este es el resumen general de nuestro cardboard actual:
+
+![sextaImagen](imagesREADME/19_11_2019.png)    
+
+
+###### Actualizado 25/11/2019 23:50
+
+___
+
+
+
+
+
+
+
+
+
+
+
+
