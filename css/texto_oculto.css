@@ -3,7 +3,8 @@
   height: 200px;
   perspective: 800px; /*Es importante darle perspectiva al contenedor para cuando pasemos el ratón la veamos tumbada*/
   margin: auto;
-  margin-bottom: 100px; /*Añadimos un margen inferior por que las rotaciones y sombra ocupan posiciones fuera del contenedor, si hay algo debajo no interfieren*/
+  margin-bottom: 10%; /*Añadimos un margen inferior por que las rotaciones y sombra ocupan posiciones fuera del contenedor, si hay algo debajo no interfieren*/
+  margin-top: 5%;
 }
 
 /*El h3 contendrá la imagen, pero se la añadiremos a la clase para hacer baners diferentes, le damos un tamaño del 100% para que los extremos bajen igual hacia el centro por la perspectiva del contenedor padre (como si observaramos desde el frente), si le damos un tamaño de la mitad o inferior conseguimos un efecto  como si observaramos un poco lado */
