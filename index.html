@@ -16,7 +16,7 @@
     <link rel="stylesheet" type="text/css" href="css/grid.css">
     <link rel="stylesheet" type="text/css" href="css/botondesplegable.css"> 
     <link rel="stylesheet" type="text/css" href="css/texto_oculto.css">  
-    <link rel="stylesheet" type="text/css" href="css/cards_crystal_panel.css">  
+    <link rel="stylesheet" type="text/css" href="css/componenteDos.css">  
 
 
     <script type="text/javascript">  // Get the panel
@@ -42,34 +42,108 @@
           }
         }
       }
-    </script>
+  
+      
 
-    <script>
-      function myFunction() {
-        var x = document.getElementById("snackbar");
-        x.className = "show";
-        setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-      }
-      function myFunction1() {
-        var x = document.getElementById("snackbar");
-        x.className = "show1";
-      }
-      function myFunction2() {
-        var x = document.getElementById("snackbar");
-        x.className = "hide";
-      }
+
+
+
+
+      document.addEventListener('readystatechange',carga_eventos,false);
+        function carga_eventos(){
+
+          if(document.readyState=="interactive"){
+
+
+            document.getElementById("boton1").addEventListener("click",myFunction1,false);
+            document.getElementById("boton2").addEventListener("click",myFunction2,false);
+            document.getElementById("boton3").addEventListener("click",myFunction3,false);
+
+
+            document.getElementById("banner").addEventListener("click",cambiaColor,false);
+
+            document.getElementById("moon").addEventListener("click",moon,false);
+
+            document.getElementById("botonNav1").addEventListener("click",filtros,false);
+
+          }
+        }
+
+        function myFunction1() {
+          var x = document.getElementById("snackbar");
+          x.className = "show";
+          setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+        }
+        function myFunction2() {
+          var x = document.getElementById("snackbar");
+          x.className = "show1";
+        }
+        function myFunction3() {
+          var x = document.getElementById("snackbar");
+          x.className = "none";
+        }
+        function moon(){
+          var body= document.getElementById("body");
+          if(body.className=="filter0"){
+            body.className="";
+          }else{
+             body.className="filter0";
+          }
+        }
+        function filtros(){
+          var body= document.getElementById("body");
+          if(body.className==""){
+            body.className="filter1";
+          }else if(body.className=="filter1"){
+            body.className="filter2";
+          }else if(body.className=="filter2"){
+            body.className="filter3";
+          }else if(body.className=="filter3"){
+            body.className="filter4";
+          }else if(body.className=="filter4"){
+            body.className="";
+          }else{
+             document.getElementById("body").className="filter1";
+          }
+
+        }
+
+        function cambiaColor(){
+          var banner= document.getElementById("banner");
+          if(banner.className=="text color1"){
+           banner.className="text color2";
+          }else if(banner.className=="text color2"){
+            banner.className="text color3";
+          }else if(banner.className=="text color3"){
+            banner.className="text color4";
+          }else if(banner.className=="text color4"){
+            banner.className="text color5";
+          }else if(banner.className=="text color5"){
+            banner.className="text color6";
+          }else if(banner.className=="text color6"){
+            banner.className="text color7";
+          }else if(banner.className=="text color7"){
+            banner.className="text color8";
+          }else if(banner.className=="text color8"){
+            banner.className="text color9";
+          }else if(banner.className=="text color9"){
+            banner.className="text color1";
+          }
+          
+        }
     </script>
   </head>
 
-  <body id="body">
+  <body>
 
 
 
 
 
+    <p id="banner" class="text color1">LORU</p>
 
 
-
+    <div id="body">
 
     <section class="backgroundFixed">
 
@@ -77,6 +151,8 @@
         <label for="check"><h1 class="ti">LoRu</h1></label>
 
         <nav>
+          <p id="botonNav1" class="enlace-menu">BLANCO Y NEGRO</p>
+
           <a href="https://jhonjairoal.github.io/LoRu/buttons.html" class="enlace-menu">buttons</a>
           <a href="https://jhonjairoal.github.io/LoRu/card.html" class="enlace-menu">card</a>
           <a href="https://jhonjairoal.github.io/LoRu/efecto_decente.html" class="enlace-menu">imagen tumbada</a>
@@ -85,39 +161,46 @@
           <a href="https://jhonjairoal.github.io/LoRu/menu_horizontal.html" class="enlace-menu">Menu horizontal</a>
           <a href="https://jhonjairoal.github.io/LoRu/menu_vertical.html" class="enlace-menu">Menu vertical</a>
           <a href="https://jhonjairoal.github.io/LoRu/pruebas.html" class="enlace-menu">pruebas</a>
+          <img id="moon" src="img/icon.jpg" alt="moon" height="42" width="42"> 
         </nav>
       </header>
       <input type="checkbox" id="check">
-
       <nav class="sidebar"  id="animateList">
         <ul>
           <li class="active"><a href="#">Welcome</a></li>
           <li><a href="#par">Who We Are</a></li>
           <li><a href="#">What We Do</a></li>
-          <li><a href="#">Get In Touch</a></li>
+          <li><a href="#" class="oculto">Get In Touch</a></li>
+              <ul class="submenu">
+                    <li><a href="#">CSS3</a></li>
+                    <li><a href="#">HTML5</a></li>
+                    <li><a href="#">PHP</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                  </ul>
         </ul>
       </nav>
-
-
 
     </section>
 
 
 
-    <div class="text">LORU</div>
 
+
+<p class="grab">Tocame :D</p>
+<p class="grabbing">Agarrame :)</p>
 
 
 
 
     <div class="rotulo">
       <div class="container">
+
         <h1>Componente</h1>
         <p>Este componente es ......</p>
-        <button onclick="myFunction()">Muestra cookies por 3 segundos</button>
+        <button id="boton1">Muestra cookies por 3 segundos</button>
 
-        <button onclick="myFunction1()">Muestra cookies infinite</button>
-        <button onclick="myFunction2()">Hide cookies</button>
+        <button id="boton2">Muestra cookies infinite</button>
+        <button id="boton3">Hide cookies</button>
 
         <div id="snackbar">Este es el componente del panel de información</div>
 
@@ -141,7 +224,12 @@
         <div class="card-body text-info row">
           <div class="bg-light  col-xs-12 col-md-6" >          
             <div class="card-body">
-              <img src="img/2288730.jpg" class="card-img" alt="...">
+
+
+<div class="container">
+    <div class="loader"></div>
+</div>
+
             </div>
           </div>
 
@@ -474,18 +562,6 @@ img:hover{
         <p>Este componente es un texto oculto, en este caso hemos creado unos banners con unas imágenes.</p>
       </div>
     </div>
-    
-     <h2>Explicacion</h2>
-    <p>Para empezar creamos un contenedor con texto dentro, en nuestro caso un h3. El h3 contendrá la imagen, pero se la añadiremos a la clase para hacer baners diferentes, le damos un tamaño del 100% para que los extremos bajen igual hacia el centro por la perspectiva del contenedor padre con <code>perspective: 800px</code>(como si observaramos desde el frente), si le damos un tamaño de la mitad o inferior conseguimos un efecto  como si observaramos un poco lado.</p>
-    
-    <p>La propiedad <code>transform</code> de CSS3 nos da la habilidad de transformar elementos en 2D o en 3D. Nos permite rotar, escalar, mover, torcer, etc, elementos.</p>
-    
-    <p>En <code>.cuadro h3::after</code> procedemos a añadir la cita.</p>
-    
-    <p>El contenido del h3 lo tenemos en un párrafo para que no interfiera cuando movamos las capas y poder hacerlo independientemente. Capa de sombra <code>(::before)</code>, capa con autor <code>(p)</code>, capa con imagen <code>(h3)</code> y capa con la frase del autor <code>(::after)</code>).</p>
-    
-    <p>En <code>.cuadro h3 p</code> utilizamos <code>transform: rotateX(-90deg)</code> para rotar de manera que el texto esté mirando hacia abajo, modificamos el origen de la transformacion del parrafo que está justo debajo de la imagen, ya tumado por la rotación, al darle origen top empieza desde arriba y a la vez conseguimos que se suba y se oculte detrás de la imagen antes de iniciar el efecto </p>
-    <p>Para la sombra hacemos uso de <code>::before</code>, y le damos una posicion absoluta ya que por ejemplo la posicion relativa nos hace la sombra en el punto 0,0 del .cuadro por lo que necesitamos que sea absoluta o fixed</p>
 
     <section class="container">        
       <!--BANNERS-->
@@ -819,6 +895,6 @@ img:hover{
 
 
 
-
+</div>
   </body>
 </html>
