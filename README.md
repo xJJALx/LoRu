@@ -207,7 +207,7 @@ Dentro del componente 2. Tarjetas:
 - Añadirle efectos distinto a cada hover de las imagenes de las tarjetas.    
 
 
-Falta por hacer el componente de paginacion y por meter los componentes de: Botones de cookies, el código con la etiqueta <code> y el panel modal emergente.
+Falta por hacer el componente de paginacion y por meter los componentes de: Botones de cookies, el código con la etiqueta < code > y el panel modal emergente.
 
 
 
