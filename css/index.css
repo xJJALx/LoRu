@@ -1,0 +1,29 @@
+.componenteUno {
+  width: 100%;
+  min-height: 70vh; /* le damos solo un minimo para que sea responsive el fondo*/
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: top;
+  background-image:url(../img/lake.jpg);
+}
+
+.componenteTres{
+  width: 100%;
+  min-height: 70vh; /* le damos solo un minimo para que sea responsive el fondo*/
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: top;
+  background-image:url(../img/mountain.png);
+}
+
+.componenteCuatro{
+  width: 100%;
+  min-height: 70vh; /* le damos solo un minimo para que sea responsive el fondo*/
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: top;
+  background-image:url(../img/31270.jpg);
+}
