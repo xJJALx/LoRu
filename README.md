@@ -3,9 +3,9 @@
 ___
 ###### Actualizado 14/11/2019 14:00  
 
-Este será nuestro diario en el que quedará registrado la planificación, el seguimiento, y las reuniones de nuestro proyecto.  
+Utilizaremos este README.md como si fuera nuestro diario en el que quedará registrado la planificación, el seguimiento, y las reuniones de nuestro proyecto semanalmente.  
 
-Este es el vistazo principal de nuestro apartado de Cardboard.
+Un vistazo principal de nuestro apartado de Cardboard en el que se ve nuestro nombre de repositorio, y en la ventana "proyecto", el que acabamos de crear:
 ![primeraImagen](imagesREADME/14_11_2019_1.png)  
 
 Dentro del Cardboard se pueden apreciar las distintas secciones, entre las que se encuentran:  
@@ -101,8 +101,8 @@ Hemos añadido a la columna "Ideas" del cardboard la tarjeta de cambiar el curso
 Actualmente seguimos trabajando en el componente del panel de información emergente, a la vez que creamos uno nuestro propio para mostrar una alerta.  
 También estamos diseñando el modelo con el que vamos a mostrar el código (css,html,js) de nuestros componentes en la página web, optando por uno de ventanas / pestañas deslizables.    
 
-Tenemos además: un background fijo con un panel deslizable encima transparente, que nos ha resultado interesante probar, unos botones para desplegar un panel en la parte inferior temporal o fijo y unos gifs animados que además son interactivos en cuanto a hover se refiere.  
-Nuestro resumen del cardboard actual queda así:
+Tenemos además: un background fijo con un panel deslizable encima transparente, que nos ha resultado interesante probar, unos botones para desplegar un panel en la parte inferior temporal o fijo y unos gifs animados que además son interactivos en cuanto a hover se refiere.    
+Nota: Hay columnas que son bastante largas y no caben dentro de la imagen ya que se vería muy pequeño y poco nítido. De ahora en adelante seran recortadas por la parte inferior.  Nuestro resumen del cardboard actual queda así:
 
 ![quintaImagen](imagesREADME/19_11_2019.png)    
 
@@ -163,8 +163,51 @@ Este es el resumen general de nuestro cardboard actual:
 
 ___
 
+###### Actualizado 29/11/2019 19:00
+
+## Reuniones 5 y 6.
+
+Ayer, día 28, estuvimos trabajando gran parte de la tarde y noche pero no escribimos nada en el README por lo que lo actualizaremos con la reunión de hoy.    
+
+El componente de "texto_oculto" que se encontraba en desarrollo ha cambiado de maquetación para pasar a ser el componente de "banner", que son unas imágenes horizontales con pequeña altura a modo de pancarta. Además contendrá la cita de un autor dentro del mismo y el nombre del autor oculto, que será visible con una animación de movimiento. Se han dotado los contenedores con transiciones en los ejes X y Z para conseguir que al pasar el ratón el banner se tumbe hacia atrás. Generando una sombra y revelando el nombre del autor.    
+
+Se está trabajando en ir eliminando poco a poco las clases y propiedades que heredamos de boostrap y no era muy correcto utilizarlas por lo que estamos sustituyéndolas por las nuestros codigos de css.    
+
+Hemos añadido un submenú a la barra de navegación vertical , (añadido también al cardboard a la columna "en progreso") para que al pasar por uno de los links del menú, se despliegue. También hemos añadido distintos tipos de estilos y colores al banner que teníamos deslizable en la portada del index.html.    
+
+Se ha incluido también un icono de una luna que representa el cambio de estado de modo nocturno / normal, el cual bajará el brillo ligeramente a la pantalla. Hay varias pruebas incluidas de cambio del cursor al hacer hover en cosas, pero se encuentra en una fase de testeo y pruebas.    
+
+Por último, añadimos un botón en la barra de navegación horizontal que es utilizado para cambiar la apariencia global de la página, ya que aplica un filtro a todo el body
+
+![séptimaImagen](imagesREADME/29_11_2019.png)  
 
 
+###### Actualizado 29/11/2019 22:00
+
+Hemos creado un fichero nuevo llamado inicio.html en el que estamos añadiendo los componentes que ya están terminados para ir viendo el resultado final ya estructurado.    
+
+Hemos añadido la tarjeta, los botones, los botones de mensajes desplegables, el panel con el código desplazable (CSS, HTML...), el panel desplegable informativo, las barras de navegación, los banner, el banner de la portada y los huevos de los componentes vacíos.    
+
+También hemos hecho un repaso rápido a lo que nos gustaría cambiar después del descanso que nos queríamos tomar:  
+- En la portada hay que quitar el boton y los bordes de "Loru" y dejar solo las letras.
+- En la barra de navegacion superior , meter hover al background y animación.
+- Reducir el tamaño height del banner degradado de los componentes.
+- Ver si queda bien cambiar en cada banner el degradado adaptandolo al fondo (colores diferentes en cada uno).  
+
+Dentro del componente de Cristal:  
+- Cambiar focus de la pestaña a más oscuro.  
+- Separar los botones de pestañas del comienzo de la letra para que no se superpongan.
+
+Dentro del componente 1. Boton:  
+- Meterle margenes superiores y separar el componente del cristal (explicacion de codigo HTML, CSS etc).
+-Aumentar el tamaño de la letra.
+
+Dentro del componente 2. Tarjetas:  
+- Aumentar el tamaño del borde y cambiar el fonde del botón.
+- Añadirle efectos distinto a cada hover de las imagenes de las tarjetas.    
+
+
+Falta por hacer el componente de paginacion y por meter los componentes de: Botones de cookies, el código con la etiqueta <code> y el panel modal emergente.
 
 
 
