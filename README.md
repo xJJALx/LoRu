@@ -188,21 +188,21 @@ Hemos creado un fichero nuevo llamado inicio.html en el que estamos añadiendo l
 
 Hemos añadido la tarjeta, los botones, los botones de mensajes desplegables, el panel con el código desplazable (CSS, HTML...), el panel desplegable informativo, las barras de navegación, los banner, el banner de la portada y los huevos de los componentes vacíos.    
 
-También hemos hecho un repaso rápido a lo que nos gustaría cambiar después del descanso que nos queríamos tomar:  
+También hemos hecho un repaso rápido a lo que nos gustaría cambiar después del descanso que nos queríamos tomar:
 - En la portada hay que quitar el boton y los bordes de "Loru" y dejar solo las letras.
 - En la barra de navegacion superior , meter hover al background y animación.
 - Reducir el tamaño height del banner degradado de los componentes.
 - Ver si queda bien cambiar en cada banner el degradado adaptandolo al fondo (colores diferentes en cada uno).  
 
-Dentro del componente de Cristal:  
+Dentro del componente de Cristal:
 - Cambiar focus de la pestaña a más oscuro.  
 - Separar los botones de pestañas del comienzo de la letra para que no se superpongan.
 
-Dentro del componente 1. Boton:  
+Dentro del componente 1. Boton:
 - Meterle margenes superiores y separar el componente del cristal (explicacion de codigo HTML, CSS etc).
 -Aumentar el tamaño de la letra.
 
-Dentro del componente 2. Tarjetas:  
+Dentro del componente 2. Tarjetas:
 - Aumentar el tamaño del borde y cambiar el fonde del botón.
 - Añadirle efectos distinto a cada hover de las imagenes de las tarjetas.    
 
