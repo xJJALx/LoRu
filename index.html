@@ -16,7 +16,8 @@
     <link rel="stylesheet" type="text/css" href="css/grid.css">
     <link rel="stylesheet" type="text/css" href="css/botondesplegable.css"> 
     <link rel="stylesheet" type="text/css" href="css/texto_oculto.css">  
-    <link rel="stylesheet" type="text/css" href="css/componenteDos.css">  
+    <link rel="stylesheet" type="text/css" href="css/componenteDos.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css"> 
 
 
     <script type="text/javascript">  // Get the panel
@@ -42,95 +43,126 @@
           }
         }
       }
-  
-      
-
-
 
 
 
       document.addEventListener('readystatechange',carga_eventos,false);
-        function carga_eventos(){
+      function carga_eventos(){
 
-          if(document.readyState=="interactive"){
-
-
-            document.getElementById("boton1").addEventListener("click",myFunction1,false);
-            document.getElementById("boton2").addEventListener("click",myFunction2,false);
-            document.getElementById("boton3").addEventListener("click",myFunction3,false);
+        if(document.readyState=="interactive"){
 
 
-            document.getElementById("banner").addEventListener("click",cambiaColor,false);
+          document.getElementById("boton1").addEventListener("click",myFunction1,false);
+          document.getElementById("boton2").addEventListener("click",myFunction2,false);
+          document.getElementById("boton3").addEventListener("click",myFunction3,false);
 
-            document.getElementById("moon").addEventListener("click",moon,false);
 
-            document.getElementById("botonNav1").addEventListener("click",filtros,false);
+          document.getElementById("banner").addEventListener("click",cambiaColor,false);
 
-          }
+          document.getElementById("moon").addEventListener("click",moon,false);
+
+          document.getElementById("botonNav1").addEventListener("click",filtros,false);
+
+          document.getElementById("changeButon").addEventListener("click",tiposBoton,false);
+
         }
+      }
 
-        function myFunction1() {
-          var x = document.getElementById("snackbar");
-          x.className = "show";
-          setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+      //Funcion que modifica el color del componente 1 Boton, Cambia el color principal y el del hover.
+      function tiposBoton(){
+        var boton= document.getElementById("botonHover");
+        if(boton.className=="btn centrado draw-border"){
+          boton.className="btn centrado draw-border white";
+        }else if(boton.className=="btn centrado draw-border white"){
+          boton.className="btn centrado draw-border green";
+        }else if(boton.className=="btn centrado draw-border green"){
+          boton.className="btn centrado draw-border pink";
+        }else if(boton.className=="btn centrado draw-border pink"){
+          boton.className="btn centrado draw-border orange";
+        }else if(boton.className=="btn centrado draw-border orange"){
+          boton.className="btn centrado draw-border red";
+        }else {
+          boton.className="btn centrado draw-border";
         }
-        function myFunction2() {
-          var x = document.getElementById("snackbar");
+      }
+
+      function myFunction1() {
+        var x = document.getElementById("snackbar");
+        x.className = "show";
+        setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+      }
+      function myFunction2() {
+        var x = document.getElementById("snackbar");
+        if(x.className == "show1"){
+          x.className = "none";
+        }else{
           x.className = "show1";
         }
-        function myFunction3() {
-          var x = document.getElementById("snackbar");
+      }
+      -
+        -
+        function myFunction1() {
+        var x = document.getElementById("snackbar");
+        x.className = "show";
+        setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+      }
+      function myFunction2() {
+        var x = document.getElementById("snackbar");
+        if(x.className == "show1"){
           x.className = "none";
+        }else{
+          x.className = "show1";
         }
-        function moon(){
-          var body= document.getElementById("body");
-          if(body.className=="filter0"){
-            body.className="";
-          }else{
-             body.className="filter0";
-          }
+      }
+      function moon(){
+        var body= document.getElementById("body");
+        if(body.className=="filter0"){
+          body.className="";
+        }else{
+          body.className="filter0";
         }
-        function filtros(){
-          var body= document.getElementById("body");
-          if(body.className==""){
-            body.className="filter1";
-          }else if(body.className=="filter1"){
-            body.className="filter2";
-          }else if(body.className=="filter2"){
-            body.className="filter3";
-          }else if(body.className=="filter3"){
-            body.className="filter4";
-          }else if(body.className=="filter4"){
-            body.className="";
-          }else{
-             document.getElementById("body").className="filter1";
-          }
+      }
+      function filtros(){
+        var body= document.getElementById("body");
+        if(body.className==""){
+          body.className="filter1";
+        }else if(body.className=="filter1"){
+          body.className="filter2";
+        }else if(body.className=="filter2"){
+          body.className="filter3";
+        }else if(body.className=="filter3"){
+          body.className="filter4";
+        }else if(body.className=="filter4"){
+          body.className="";
+        }else{
+          document.getElementById("body").className="filter1";
+        }
 
+      }
+
+      function cambiaColor(){
+        var banner= document.getElementById("banner");
+        if(banner.className=="text color1"){
+          banner.className="text color2";
+        }else if(banner.className=="text color2"){
+          banner.className="text color3";
+        }else if(banner.className=="text color3"){
+          banner.className="text color4";
+        }else if(banner.className=="text color4"){
+          banner.className="text color5";
+        }else if(banner.className=="text color5"){
+          banner.className="text color6";
+        }else if(banner.className=="text color6"){
+          banner.className="text color7";
+        }else if(banner.className=="text color7"){
+          banner.className="text color8";
+        }else if(banner.className=="text color8"){
+          banner.className="text color9";
+        }else if(banner.className=="text color9"){
+          banner.className="text color1";
         }
 
-        function cambiaColor(){
-          var banner= document.getElementById("banner");
-          if(banner.className=="text color1"){
-           banner.className="text color2";
-          }else if(banner.className=="text color2"){
-            banner.className="text color3";
-          }else if(banner.className=="text color3"){
-            banner.className="text color4";
-          }else if(banner.className=="text color4"){
-            banner.className="text color5";
-          }else if(banner.className=="text color5"){
-            banner.className="text color6";
-          }else if(banner.className=="text color6"){
-            banner.className="text color7";
-          }else if(banner.className=="text color7"){
-            banner.className="text color8";
-          }else if(banner.className=="text color8"){
-            banner.className="text color9";
-          }else if(banner.className=="text color9"){
-            banner.className="text color1";
-          }
-          
-        }
+      }
     </script>
   </head>
 
@@ -139,269 +171,234 @@
 
 
 
-
+    <!--BANNER DE PORTADA-->
     <p id="banner" class="text color1">LORU</p>
 
-
+    <!--EFECTO NOCTURNO-->
     <div id="body">
 
-    <section class="backgroundFixed">
+      <section class="backgroundFixed">
 
-      <header class="menu-fijo">
-        <label for="check"><h1 class="ti">LoRu</h1></label>
+        <header class="menu-fijo">
+          <label for="check"><h1 class="ti">LoRu</h1></label>
 
-        <nav>
-          <p id="botonNav1" class="enlace-menu">BLANCO Y NEGRO</p>
+          <nav>
+            <p id="botonNav1" class="enlace-menu">BLANCO Y NEGRO</p>
 
-          <a href="https://jhonjairoal.github.io/LoRu/buttons.html" class="enlace-menu">buttons</a>
-          <a href="https://jhonjairoal.github.io/LoRu/card.html" class="enlace-menu">card</a>
-          <a href="https://jhonjairoal.github.io/LoRu/efecto_decente.html" class="enlace-menu">imagen tumbada</a>
-          <a href="https://jhonjairoal.github.io/LoRu/index.html" class="enlace-menu">index</a>
-          <a href="https://jhonjairoal.github.io/LoRu/grid.html" class="enlace-menu">grid</a>
-          <a href="https://jhonjairoal.github.io/LoRu/menu_horizontal.html" class="enlace-menu">Menu horizontal</a>
-          <a href="https://jhonjairoal.github.io/LoRu/menu_vertical.html" class="enlace-menu">Menu vertical</a>
-          <a href="https://jhonjairoal.github.io/LoRu/pruebas.html" class="enlace-menu">pruebas</a>
-          <img id="moon" src="img/icon.jpg" alt="moon" height="42" width="42"> 
+            <a href="https://jhonjairoal.github.io/LoRu/buttons.html" class="enlace-menu">buttons</a>
+            <a href="https://jhonjairoal.github.io/LoRu/card.html" class="enlace-menu">card</a>
+            <a href="https://jhonjairoal.github.io/LoRu/efecto_decente.html" class="enlace-menu">imagen tumbada</a>
+            <a href="https://jhonjairoal.github.io/LoRu/index.html" class="enlace-menu">index</a>
+            <a href="https://jhonjairoal.github.io/LoRu/grid.html" class="enlace-menu">grid</a>
+            <a href="https://jhonjairoal.github.io/LoRu/menu_horizontal.html" class="enlace-menu">Menu horizontal</a>
+            <a href="https://jhonjairoal.github.io/LoRu/menu_vertical.html" class="enlace-menu">Menu vertical</a>
+            <a href="https://jhonjairoal.github.io/LoRu/pruebas.html" class="enlace-menu">pruebas</a>
+            <img id="moon" src="img/icon.jpg" alt="moon" height="42" width="42"> 
+          </nav>
+        </header>
+        <input type="checkbox" id="check">
+        <nav class="sidebar"  id="animateList">
+          <ul>
+            <li class="active"><a href="#">Welcome</a></li>
+            <li><a href="#par">Who We Are</a></li>
+            <li><a href="#">What We Do</a></li>
+            <li><a href="#" class="oculto">Get In Touch</a></li>
+            <ul class="submenu">
+              <li><a href="#">CSS3</a></li>
+              <li><a href="#">HTML5</a></li>
+              <li><a href="#">PHP</a></li>
+              <li><a href="#">JavaScript</a></li>
+            </ul>
+          </ul>
         </nav>
-      </header>
-      <input type="checkbox" id="check">
-      <nav class="sidebar"  id="animateList">
-        <ul>
-          <li class="active"><a href="#">Welcome</a></li>
-          <li><a href="#par">Who We Are</a></li>
-          <li><a href="#">What We Do</a></li>
-          <li><a href="#" class="oculto">Get In Touch</a></li>
-              <ul class="submenu">
-                    <li><a href="#">CSS3</a></li>
-                    <li><a href="#">HTML5</a></li>
-                    <li><a href="#">PHP</a></li>
-                    <li><a href="#">JavaScript</a></li>
-                  </ul>
-        </ul>
-      </nav>
 
-    </section>
+      </section>
 
 
 
 
 
-<p class="grab">Tocame :D</p>
-<p class="grabbing">Agarrame :)</p>
+      <p class="grab">Tocame :D</p>
+      <p class="grabbing">Agarrame :)</p>
 
 
 
 
-    <div class="rotulo">
-      <div class="container">
+      <div class="rotulo">
+        <div class="container">
 
-        <h1>Componente</h1>
-        <p>Este componente es ......</p>
-        <button id="boton1">Muestra cookies por 3 segundos</button>
+          <h1>Componente</h1>
+          <p>Este componente es ......</p>
+          <label id="boton1" class="button" >Muestra cookies por 3 segundos</label>
+          <label id="boton2" class="button" >Muestra / oculta cookies</label>
 
-        <button id="boton2">Muestra cookies infinite</button>
-        <button id="boton3">Hide cookies</button>
-
-        <div id="snackbar">Este es el componente del panel de información</div>
+          <div id="snackbar">Este es el componente del panel de información</div>
 
 
 
 
-
-
-
-        <label class="button" for="launch2">Launch it!</label>
-        <input type="checkbox" name="checkbox" id="launch2" class="modal__state">
-      </div>
-    </div>
-
-
-    <section class="container mb-5 mt-5">
-      <div class="card border-info mb-3 " >
-        <div class="card-header">
-          <h5 class="card-title">Tarjetas e imágenes</h5>
+          <label class="button" for="launch2">Launch it!</label>
+          <input type="checkbox" name="checkbox" id="launch2" class="modal__state">
         </div>
-        <div class="card-body text-info row">
-          <div class="bg-light  col-xs-12 col-md-6" >          
-            <div class="card-body">
+      </div>
 
 
-<div class="container">
-    <div class="loader"></div>
-</div>
+      <section class="componenteUno">
 
+        <img id="changeButon" class="centrado" src="img/change.png" alt="change icon" height="42" width="42"> 
+        <button id="botonHover" class="btn centrado draw-border">Draw Border</button>
+
+        <div class="tablero-cristal">
+          <aside class="contenido-cristal"> 
+            <div class="tabs ">
+              <div class="tab">
+                <input type="radio" id="tab-1C1" name="tab-group-1" checked>
+                <label for="tab-1C1">Descripción</label>
+                <div class="content-tab">
+                  <p>TEXTO </p>
+                </div> 
+              </div>
+              <div class="tab">
+                <input type="radio" id="tab-2C1" name="tab-group-1">
+                <label for="tab-2C1">Code</label>
+                <div class="content-tab">
+                  <p>
+                    <code>HOLA CODE</code>
+                  </p>
+
+
+                </div> 
+              </div>
+              <div class="tab">
+                <input type="radio" id="tab-3C1" name="tab-group-1">
+                <label for="tab-3C1">CSS</label>
+                <div class="content-tab">
+                  <p>Estás autorizado para <kbd>ctrl</kbd> + <kbd>c</kbd> y <kbd>ctrl</kbd> + <kbd>v</kbd> ; D</p>
+                  <pre>
+HOLA
+                </pre>
+                </div> 
+              </div>
             </div>
+          </aside>
+        </div>
+
+      </section>
+
+
+
+
+
+      <!--AQUI TERMINA EL COMPONENTE 1-->
+      <!--AQUI TERMINA EL COMPONENTE 1-->
+      <!--AQUI TERMINA EL COMPONENTE 1-->
+
+
+
+
+
+      <!--AQUI EMPIEZA EL COMPONENTE 2-->
+      <!--AQUI EMPIEZA EL COMPONENTE 2-->
+      <!--AQUI EMPIEZA EL COMPONENTE 2-->
+
+      <div class="rotulo">
+        <div class="container">
+          <h1>Componente</h1>
+          <p>Este componente es ......</p>
+        </div>
+      </div>
+
+
+
+      <section class="container mb-5 mt-5">
+        <div class="card border-info mb-3 " >
+          <div class="card-header">
+            <h5 class="card-title">Tarjetas e imágenes</h5>
           </div>
-
-          <div class="card text-white col-xs-12 col-md-6 ">
-            <div class="card-body"> 
-
-              <input type="radio" name="nav" id="one" checked="checked"/>
-              <label for="one">Explicacion</label>
-
-              <input type="radio" name="nav" id="two"/>
-              <label for="two">Code</label>
-
-              <input type="radio" name="nav" id="three"/>
-              <label for="three">pre</label>
-
-              <article class="content one">
-
-
-                <h3>What is Lorem Ipsum?</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrum.</p>
-
-
-              </article>
-
-              <article class="content two">
-                <h3>Where does it come from?</h3>
-                <code>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, fr.</code>
-              </article>
-
-              <article class="content three">
-                <h3>Why do we use it?</h3>
-                <pre>
-header {
-  background-image: url(../img/fondo.jpg) ;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: white;
-  height: 100vh;
-}
-
-
-img:hover{
-  -moz-transform: scale(1.1);
-  -webkit-transform: scale(1.1);
-  -o-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1); /* escalado de imagen para aumentar */
-  box-shadow: 0 4px 16px #DD0E4E; /* sombra detrás de la imagen */
-}
-                </pre>      
-              </article>
+          <div class="card-body text-info row">
+            <div class="bg-light  col-xs-12 col-md-6" >          
+              <img src="img/cube.gif" onmouseover="bigImg(this)" name="foto" onmouseout="normalImg(this)"  alt="..." >
+              <script>
+                function bigImg(x) {
+                  x.src = "img/star.gif";
+                }
+                function normalImg(x) {
+                  x.src = "img/cube.gif";
+                }
+              </script>
             </div>
 
-          </div>
+            <div class="card text-white col-xs-12 col-md-6 ">
+              <div class="card-body"> 
 
-        </div>
-      </div>
-    </section>
+                <input type="radio" name="nav" id="one" checked="checked"/>
+                <label for="one">Explicacion</label>
 
+                <input type="radio" name="nav" id="two"/>
+                <label for="two">Code</label>
 
-    <!--AQUI TERMINA EL COMPONENTE 1-->
-    <!--AQUI TERMINA EL COMPONENTE 1-->
-    <!--AQUI TERMINA EL COMPONENTE 1-->
+                <input type="radio" name="nav" id="three"/>
+                <label for="three">pre</label>
 
-
-
-
-
-    <!--AQUI EMPIEZA EL COMPONENTE 2-->
-    <!--AQUI EMPIEZA EL COMPONENTE 2-->
-    <!--AQUI EMPIEZA EL COMPONENTE 2-->
-
-    <div class="rotulo">
-      <div class="container">
-        <h1>Componente</h1>
-        <p>Este componente es ......</p>
-      </div>
-    </div>
+                <article class="content one">
 
 
-
-    <section class="container mb-5 mt-5">
-      <div class="card border-info mb-3 " >
-        <div class="card-header">
-          <h5 class="card-title">Tarjetas e imágenes</h5>
-        </div>
-        <div class="card-body text-info row">
-          <div class="bg-light  col-xs-12 col-md-6" >          
-            <img src="img/cube.gif" onmouseover="bigImg(this)" name="foto" onmouseout="normalImg(this)"  alt="..." >
-            <script>
-              function bigImg(x) {
-                x.src = "img/star.gif";
-              }
-              function normalImg(x) {
-                x.src = "img/cube.gif";
-              }
-            </script>
-          </div>
-
-          <div class="card text-white col-xs-12 col-md-6 ">
-            <div class="card-body"> 
-
-              <input type="radio" name="nav" id="one" checked="checked"/>
-              <label for="one">Explicacion</label>
-
-              <input type="radio" name="nav" id="two"/>
-              <label for="two">Code</label>
-
-              <input type="radio" name="nav" id="three"/>
-              <label for="three">pre</label>
-
-              <article class="content one">
+                  <h3>What is Lorem Ipsum?</h3>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrum.</p>
 
 
-                <h3>What is Lorem Ipsum?</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrum.</p>
+                </article>
 
+                <article class="content two">
+                  <h3>Where does it come from?</h3>
+                  <code>Texte examplse</code>
+                </article>
 
-              </article>
-
-              <article class="content two">
-                <h3>Where does it come from?</h3>
-                <code>Texte examplse</code>
-              </article>
-
-              <article class="content three">
-                <h3>Why do we use it?</h3>
-                <pre>code 
+                <article class="content three">
+                  <h3>Why do we use it?</h3>
+                  <pre>code 
                   code 
                   code{}
                 </pre>      
-              </article>
+                </article>
+              </div>
+
             </div>
 
           </div>
+        </div>
+      </section>
 
+
+
+      <!--AQUI TERMINA EL COMPONENTE 2-->
+      <!--AQUI TERMINA EL COMPONENTE 2-->
+      <!--AQUI TERMINA EL COMPONENTE 2-->
+
+
+
+
+
+      <!--AQUI EMPIEZA EL COMPONENTE 3-->
+      <!--AQUI EMPIEZA EL COMPONENTE 3-->
+      <!--AQUI EMPIEZA EL COMPONENTE 3-->
+
+      <div class="rotulo">
+        <div class="container">
+          <h1>Componente</h1>
+          <p>Este componente es ......</p>
         </div>
       </div>
-    </section>
 
 
-
-    <!--AQUI TERMINA EL COMPONENTE 2-->
-    <!--AQUI TERMINA EL COMPONENTE 2-->
-    <!--AQUI TERMINA EL COMPONENTE 2-->
-
-
-
-
-
-    <!--AQUI EMPIEZA EL COMPONENTE 3-->
-    <!--AQUI EMPIEZA EL COMPONENTE 3-->
-    <!--AQUI EMPIEZA EL COMPONENTE 3-->
-
-    <div class="rotulo">
-      <div class="container">
-        <h1>Componente</h1>
-        <p>Este componente es ......</p>
-      </div>
-    </div>
-
-
-    <section class="container mb-5 mt-5">
-      <div class="card border-info mb-3 " >
-        <div class="card-header">
-          <h5 class="card-title">Tarjetas e imágenes</h5>
-        </div>
-        <div class="card-body text-info row">
-          <div class="bg-light  col-xs-12 col-md-6" >          
-            <code><pre>
+      <section class="container mb-5 mt-5">
+        <div class="card border-info mb-3 " >
+          <div class="card-header">
+            <h5 class="card-title">Tarjetas e imágenes</h5>
+          </div>
+          <div class="card-body text-info row">
+            <div class="bg-light  col-xs-12 col-md-6" >          
+              <code><pre>
 header {
   background-image: url(../img/fondo.jpg) ;
   background-attachment: fixed;
@@ -422,269 +419,289 @@ img:hover{
   box-shadow: 0 4px 16px #DD0E4E; /* sombra detrás de la imagen */
 }
           </pre>      </code>  
-          </div>
+            </div>
 
-          <div class="card text-white col-xs-12 col-md-6 ">
-            <div class="card-body"> 
+            <div class="card text-white col-xs-12 col-md-6 ">
+              <div class="card-body"> 
 
-              <input type="radio" name="nav" id="one" checked="checked"/>
-              <label for="one">Explicacion</label>
+                <input type="radio" name="nav" id="one" checked="checked"/>
+                <label for="one">Explicacion</label>
 
-              <input type="radio" name="nav" id="two"/>
-              <label for="two">Code</label>
+                <input type="radio" name="nav" id="two"/>
+                <label for="two">Code</label>
 
-              <input type="radio" name="nav" id="three"/>
-              <label for="three">pre</label>
+                <input type="radio" name="nav" id="three"/>
+                <label for="three">pre</label>
 
-              <article class="content one">
-
-
-                <h3>What is Lorem Ipsum?</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrum.</p>
+                <article class="content one">
 
 
-              </article>
+                  <h3>What is Lorem Ipsum?</h3>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrum.</p>
 
-              <article class="content two">
-                <h3>Where does it come from?</h3>
-                <code>Texte examplse</code>
-              </article>
 
-              <article class="content three">
-                <h3>Why do we use it?</h3>
-                <pre>code 
+                </article>
+
+                <article class="content two">
+                  <h3>Where does it come from?</h3>
+                  <code>Texte examplse</code>
+                </article>
+
+                <article class="content three">
+                  <h3>Why do we use it?</h3>
+                  <pre>code 
                   code 
                   code{}
                 </pre>      
-              </article>
+                </article>
+              </div>
+
             </div>
 
           </div>
+        </div>
+      </section>
 
+
+
+
+
+      <!--AQUI Termina EL COMPONENTE 3-->
+      <!--AQUI Termina EL COMPONENTE 3-->
+      <!--AQUI Termina EL COMPONENTE 3-->
+
+
+
+      <!--AQUI EMPIEZA EL COMPONENTE 4-->
+      <!--AQUI EMPIEZA EL COMPONENTE 4-->
+      <!--AQUI EMPIEZA EL COMPONENTE 4-->
+
+      <div class="rotulo">
+        <div class="container">
+          <h1>Componente</h1>
+          <p>Este componente es ......</p>
         </div>
       </div>
-    </section>
 
 
 
-
-
-    <!--AQUI Termina EL COMPONENTE 3-->
-    <!--AQUI Termina EL COMPONENTE 3-->
-    <!--AQUI Termina EL COMPONENTE 3-->
-
-
-
-    <!--AQUI EMPIEZA EL COMPONENTE 4-->
-    <!--AQUI EMPIEZA EL COMPONENTE 4-->
-    <!--AQUI EMPIEZA EL COMPONENTE 4-->
-
-    <div class="rotulo">
-      <div class="container">
-        <h1>Componente</h1>
-        <p>Este componente es ......</p>
-      </div>
-    </div>
-
-
-    <section class="container mb-5 mt-5">
-      <div class="card border-info mb-3 " >
-        <div class="card-header">
-          <h5 class="card-title">Tarjetas e imágenes</h5>
-        </div>
-        <div class="card-body text-info row">
-          <div class="bg-light  col-xs-12 col-md-6" >          
-
-            <button class="btn draw-border">Draw Border</button>
-            <button class="btn draw-border black">Draw Border</button>
-            <button class="btn draw-border white">Draw Border</button>
-
+      <section class="container mb-5 mt-5">
+        <div class="card border-info mb-3 " >
+          <div class="card-header">
+            <h5 class="card-title">Tarjetas e imágenes</h5>
           </div>
+          <div class="card-body text-info row">
+            <div class="bg-light  col-xs-12 col-md-6" >          
+
+              <button class="btn draw-border">Draw Border</button>
+              <button class="btn draw-border black">Draw Border</button>
+              <button class="btn draw-border white">Draw Border</button>
+
+            </div>
 
 
-          <div class="card text-white col-xs-12 col-md-6 ">
-            <div class="card-body"> 
+            <div class="card text-white col-xs-12 col-md-6 ">
+              <div class="card-body"> 
 
-              <input type="radio" name="nav" id="one" checked="checked"/>
-              <label for="one">Explicacion</label>
+                <input type="radio" name="nav" id="one" checked="checked"/>
+                <label for="one">Explicacion</label>
 
-              <input type="radio" name="nav" id="two"/>
-              <label for="two">Code</label>
+                <input type="radio" name="nav" id="two"/>
+                <label for="two">Code</label>
 
-              <input type="radio" name="nav" id="three"/>
-              <label for="three">pre</label>
+                <input type="radio" name="nav" id="three"/>
+                <label for="three">pre</label>
 
-              <article class="content one">
-
-
-                <h3>What is Lorem Ipsum?</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrum.</p>
+                <article class="content one">
 
 
-              </article>
+                  <h3>What is Lorem Ipsum?</h3>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrum.</p>
 
-              <article class="content two">
-                <h3>Where does it come from?</h3>
-                <code>Texte examplse</code>
-              </article>
 
-              <article class="content three">
-                <h3>Why do we use it?</h3>
-                <pre>code 
+                </article>
+
+                <article class="content two">
+                  <h3>Where does it come from?</h3>
+                  <code>Texte examplse</code>
+                </article>
+
+                <article class="content three">
+                  <h3>Why do we use it?</h3>
+                  <pre>code 
                   code 
                   code{}
                 </pre>      
-              </article>
+                </article>
+              </div>
+
             </div>
 
           </div>
-
         </div>
-      </div>
-    </section>
+      </section>
 
 
-    <!--AQUI Termina EL COMPONENTE 4-->
-    <!--AQUI Termina EL COMPONENTE 4-->
-    <!--AQUI Termina EL COMPONENTE 4-->
-
-
-
-    <!--AQUI EMPIEZA EL COMPONENTE 5-->
-    <!--AQUI EMPIEZA EL COMPONENTE 5-->
-    <!--AQUI EMPIEZA EL COMPONENTE 5-->
+      <!--AQUI Termina EL COMPONENTE 4-->
+      <!--AQUI Termina EL COMPONENTE 4-->
+      <!--AQUI Termina EL COMPONENTE 4-->
 
 
 
-    <div class="rotulo">
-      <div class="container">
-        <h1>Banners</h1>
-        <p>Este componente es un texto oculto, en este caso hemos creado unos banners con unas imágenes.</p>
-      </div>
-    </div>
-
-    <section class="container">        
-      <!--BANNERS-->
-      <div class="cuadro">
-        <h3 class="imagenUno">
-          <p>Linus Torvalds</p>
-        </h3>
-      </div>
-
-      <div class="cuadro">
-        <h3 class="imagenDos">
-          <p>Linus Torvalds</p>
-        </h3> 
-      </div>
-
-      <div class="cuadro">
-        <h3 class="imagenTres">
-          <p>Linus Torvalds</p>
-        </h3> 
-      </div>
-
-      <div class="cuadro">
-        <h3 class="imagenCuatro">
-          <p>Linus Torvalds</p>
-        </h3> 
-      </div>
-
-      <div class="cuadro">
-        <h3 class="imagenCinco">
-          <p>Linus Torvalds</p>
-        </h3> 
-      </div>
-    </section>
-
-
-    <!--AQUI Termina EL COMPONENTE 5-->
-    <!--AQUI Termina EL COMPONENTE 5-->
-    <!--AQUI Termina EL COMPONENTE 5-->
+      <!--AQUI EMPIEZA EL COMPONENTE 5-->
+      <!--AQUI EMPIEZA EL COMPONENTE 5-->
+      <!--AQUI EMPIEZA EL COMPONENTE 5-->
 
 
 
-    <!--AQUI EMPIEZA EL COMPONENTE 6-->
-    <!--AQUI EMPIEZA EL COMPONENTE 6-->
-    <!--AQUI EMPIEZA EL COMPONENTE 6-->
 
 
 
-    <div class="rotulo">
-      <div class="container">
-        <h1>Cards and crystal panel</h1>
-        <p>010101101111011010011010101 1010100  0101 10 110101010 0101</p> 
-      </div>
-    </div>
-
-
-    <!-- Card imágenes con tablero de cristal-->
-    <section class="componenteDos">
-
-      <div class="row">
-        <div class="tarjeta">
-          <img src="img/RD.png" class="oculta card-img-top" alt="...">
-          <h3>Título</h3>
-          <p>Texto descriptivo</p>
-          <a href="#" class="btn btn-primary boton">Go somewhere</a>
-        </div>
-        <div class="tarjeta">
-          <img src="img/aut.jpg" class="oculta card-img-top" alt="...">
-          <h3>Título</h3>
-          <p>Texto descriptivo</p>
-          <a href="#" class="btn btn-primary boton">Go somewhere</a>
-        </div>
-        <div class="tarjeta">
-          <img src="img/evening-55067_640.png" class="oculta card-img-top" alt="...">
-          <h3>Título</h3>
-          <p>Texto descriptivo</p>
-          <a href="#" class="btn btn-primary boton">Go somewhere</a>
-        </div>
-        <div class="tarjeta">
-          <img src="img/macro-3801743_640.jpg" class="oculta card-img-top" alt="...">
-          <h3>Título</h3>
-          <p>Texto descriptivo</p>
-          <a href="#" class="btn btn-primary boton">Go somewhere</a>
+      <div class="rotulo">
+        <div class="container">
+          <h1>Banners</h1>
+          <p>Este componente es un texto oculto, en este caso hemos creado unos banners con unas imágenes.</p>
         </div>
       </div>
 
 
-      <!--Tablero de pestañas-->
-      <div class="tablero-cristal">
-        <aside class="contenido-cristal"> 
-          <div class="tabs ">
-            <div class="tab">
-              <input type="radio" id="tab-1" name="tab-group-1" checked>
-              <label for="tab-1">Descripción</label>
-              <div class="content-tab">
-                <p>Este componente es una tarjeta básica con una imagen en la parte superior, un título, un texto y un botón transparente que al posicionar el ratón adquiere un color y sombra. La imagen también tiene una sombra y un efecto al pasar el ratón que la trae hacia el frente. Además este tablón con pestañas es otro componente, es un efecto de cristal opaco con la información de los estilos utilizados</p>
-              </div> 
-            </div>
-            <div class="tab">
-              <input type="radio" id="tab-2" name="tab-group-1">
-              <label for="tab-2">Code</label>
-              <div class="content-tab">
-                <p>
-                  Para traer las fotos al frente usamos <code>transform: scale(1.0)</code> y en función de los parametros x e y aumenta más o menos de tamaño.
-                </p>
-                <p>
-                  Para conseguir una sombra interior debemos añadir <code>inset</code> a <code>box-shadow</code> asi conseguimos un efecto mas cercano al cristal opaco.
-                  Para poder conseguir el tablón con esta textura debemos tener un <code>div</code> y añadira la clase la propiedad after, ej: <code>.tablero-cristal::after</code> y aplicar un desenfoque(<code>filter: blur(10px)</code>). Es importante heredar el background para que el efecto funcione.
-                </p>
-                <p>
-                  Dependiendo del la posición que le demos a las pestañas (ej: <code>relative</code>) se pueden superponer al tablero usando un <code>    
-                  z-index</code> cuando la pestaña esté activa, las demás estarán por detrás y se pueden posicionar moviendolas por ejemplo con <code>bottom</code>, esto combinado con un <code>border-bottom</code>  (ej: elegir el color de fondo del tablero del mismo color) nos permite un efecto que al pinchar en la pestaña se combinen pestaña y tablero, no se ve el borde inferior pero si los laterales.
-                  <br>
-                  Para el tablero:  determinar la distancia entre los margenes del elemento y de su bloque contenedor usamos las propiedades<code> left</code>, <code>rigth</code>, <code>bottom</code> y <code>top</code>, así cada pestaña mantiene su posicion y oculta a las demás, si queremos un efecto en el que se vean una encima de otra y se vea un poco el borde podemos quitar estas propiedades o darles valores diferentes
-                </p>
+      <h2>Explicacion</h2>
+      <p>Para empezar creamos un contenedor con texto dentro, en nuestro caso un h3. El h3 contendrá la imagen, pero se la añadiremos a la clase para hacer baners diferentes, le damos un tamaño del 100% para que los extremos bajen igual hacia el centro por la perspectiva del contenedor padre con <code>perspective: 800px</code> (como si observaramos desde el frente), si le damos un tamaño de la mitad o inferior conseguimos un efecto  como si observaramos un poco de lado.</p>
 
-              </div> 
-            </div>
-            <div class="tab">
-              <input type="radio" id="tab-3" name="tab-group-1">
-              <label for="tab-3">CSS</label>
-              <div class="content-tab">
-                <p>Estás autorizado para <kbd>ctrl</kbd> + <kbd>c</kbd> y <kbd>ctrl</kbd> + <kbd>v</kbd> ; D</p>
-                <pre>
+      <p>La propiedad <code>transform</code> de CSS3 nos da la habilidad de transformar elementos en 2D o en 3D. Nos permite rotar, escalar, mover, torcer, etc, elementos.</p>
+
+      <p>En <code>.cuadro h3::after{}</code> procedemos a añadir la cita.</p>
+
+      <p>El contenido del h3 lo tenemos en un párrafo para que no interfiera cuando movamos las capas y poder hacerlo independientemente. Capa de sombra <code>(::before)</code>, capa con autor <code>(p)</code>, capa con imagen <code>(h3)</code> y capa con la frase del autor <code>(::after)</code>.</p>
+
+      <p>En <code>.cuadro h3 p</code> utilizamos <code>transform: rotateX(-90deg)</code> para rotar de manera que el texto esté mirando hacia abajo, modificamos el origen de la transformacion del parrafo que está justo debajo de la imagen, ya tumbado por la rotación. Al darle origen top empieza desde arriba y a la vez conseguimos que se suba y se oculte detrás de la imagen antes de iniciar el efecto.</p>
+
+      <p>Para la sombra hacemos uso de <code>::before</code>, y le damos una posición absoluta ya que por ejemplo la posición relativa nos hace la sombra en el punto 0,0 del .cuadro por lo que necesitamos que sea absoluta o fixed. Con <code>transform: rotateX(95deg) translateZ(-50px) scale(0.75)</code> creamos una sombra, la tumbamos al rotarla en el eje X y y la profundidad (z) en negativo para bajarla.</p>
+
+      <p>Por último, para que la animación no se dañe, el ::before del h3 contiene la sombra girada por lo que al posicionar el ratón encima se moverá, entonces debemos darle una posición  y un estilo, todo ello lo haremos en: <code>.cuadro:hover h3::before{}</code> </p>
+
+      <section class="container">        
+        <!--BANNERS-->
+        <div class="cuadro">
+          <h3 class="imagenUno">
+            <p>Linus Torvalds</p>
+          </h3>
+        </div>
+
+        <div class="cuadro">
+          <h3 class="imagenDos">
+            <p>Linus Torvalds</p>
+          </h3> 
+        </div>
+
+        <div class="cuadro">
+          <h3 class="imagenTres">
+            <p>Linus Torvalds</p>
+          </h3> 
+        </div>
+
+        <div class="cuadro">
+          <h3 class="imagenCuatro">
+            <p>Linus Torvalds</p>
+          </h3> 
+        </div>
+
+        <div class="cuadro">
+          <h3 class="imagenCinco">
+            <p>Linus Torvalds</p>
+          </h3> 
+        </div>
+      </section>
+
+
+      <!--AQUI Termina EL COMPONENTE 5-->
+      <!--AQUI Termina EL COMPONENTE 5-->
+      <!--AQUI Termina EL COMPONENTE 5-->
+
+
+
+      <!--AQUI EMPIEZA EL COMPONENTE 6-->
+      <!--AQUI EMPIEZA EL COMPONENTE 6-->
+      <!--AQUI EMPIEZA EL COMPONENTE 6-->
+
+
+
+      <div class="rotulo">
+        <div class="container">
+          <h1>Cards and crystal panel</h1>
+          <p>010101101111011010011010101 1010100  0101 10 110101010 0101</p> 
+        </div>
+      </div>
+
+
+      <!-- Card imágenes con tablero de cristal-->
+      <section class="componenteDos">
+
+        <div class="row">
+          <div class="tarjeta">
+            <img src="img/RD.png" class="oculta card-img-top" alt="...">
+            <h3>Título</h3>
+            <p>Texto descriptivo</p>
+            <a href="#" class="btn btn-primary boton">Go somewhere</a>
+          </div>
+          <div class="tarjeta">
+            <img src="img/aut.jpg" class="oculta card-img-top" alt="...">
+            <h3>Título</h3>
+            <p>Texto descriptivo</p>
+            <a href="#" class="btn btn-primary boton">Go somewhere</a>
+          </div>
+          <div class="tarjeta">
+            <img src="img/evening-55067_640.png" class="oculta card-img-top" alt="...">
+            <h3>Título</h3>
+            <p>Texto descriptivo</p>
+            <a href="#" class="btn btn-primary boton">Go somewhere</a>
+          </div>
+          <div class="tarjeta">
+            <img src="img/macro-3801743_640.jpg" class="oculta card-img-top" alt="...">
+            <h3>Título</h3>
+            <p>Texto descriptivo</p>
+            <a href="#" class="btn btn-primary boton">Go somewhere</a>
+          </div>
+        </div>
+
+
+        <!--Tablero de pestañas-->
+        <div class="tablero-cristal">
+          <aside class="contenido-cristal"> 
+            <div class="tabs ">
+              <div class="tab">
+                <input type="radio" id="tab-1" name="tab-group-1" checked>
+                <label for="tab-1">Descripción</label>
+                <div class="content-tab">
+                  <p>Este componente es una tarjeta básica con una imagen en la parte superior, un título, un texto y un botón transparente que al posicionar el ratón adquiere un color y sombra. La imagen también tiene una sombra y un efecto al pasar el ratón que la trae hacia el frente. Además este tablón con pestañas es otro componente, es un efecto de cristal opaco con la información de los estilos utilizados</p>
+                </div> 
+              </div>
+              <div class="tab">
+                <input type="radio" id="tab-2" name="tab-group-1">
+                <label for="tab-2">Code</label>
+                <div class="content-tab">
+                  <p>
+                    Para traer las fotos al frente usamos <code>transform: scale(1.0)</code> y en función de los parametros x e y aumenta más o menos de tamaño.
+                  </p>
+                  <p>
+                    Para conseguir una sombra interior debemos añadir <code>inset</code> a <code>box-shadow</code> asi conseguimos un efecto mas cercano al cristal opaco.
+                    Para poder conseguir el tablón con esta textura debemos tener un <code>div</code> y añadira la clase la propiedad after, ej: <code>.tablero-cristal::after</code> y aplicar un desenfoque(<code>filter: blur(10px)</code>). Es importante heredar el background para que el efecto funcione.
+                  </p>
+                  <p>
+                    Dependiendo del la posición que le demos a las pestañas (ej: <code>relative</code>) se pueden superponer al tablero usando un <code>    
+                    z-index</code> cuando la pestaña esté activa, las demás estarán por detrás y se pueden posicionar moviendolas por ejemplo con <code>bottom</code>, esto combinado con un <code>border-bottom</code>  (ej: elegir el color de fondo del tablero del mismo color) nos permite un efecto que al pinchar en la pestaña se combinen pestaña y tablero, no se ve el borde inferior pero si los laterales.
+                    <br>
+                    Para el tablero:  determinar la distancia entre los margenes del elemento y de su bloque contenedor usamos las propiedades<code> left</code>, <code>rigth</code>, <code>bottom</code> y <code>top</code>, así cada pestaña mantiene su posicion y oculta a las demás, si queremos un efecto en el que se vean una encima de otra y se vea un poco el borde podemos quitar estas propiedades o darles valores diferentes
+                  </p>
+
+                </div> 
+              </div>
+              <div class="tab">
+                <input type="radio" id="tab-3" name="tab-group-1">
+                <label for="tab-3">CSS</label>
+                <div class="content-tab">
+                  <p>Estás autorizado para <kbd>ctrl</kbd> + <kbd>c</kbd> y <kbd>ctrl</kbd> + <kbd>v</kbd> ; D</p>
+                  <pre>
 /*Propiedades y tamaño del tablero de cristal*/
 .tablero-cristal {
   margin: auto;
@@ -790,111 +807,111 @@ img:hover{
 }
 
                 </pre>
-              </div> 
-            </div>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-
-
-    <!--AQUI Termina EL COMPONENTE 6-->
-    <!--AQUI Termina EL COMPONENTE 6-->
-    <!--AQUI Termina EL COMPONENTE 6-->
-
-
-
-
-    <!--AQUI EMPIEZA EL COMPONENTE 7-->
-    <!--AQUI EMPIEZA EL COMPONENTE 7-->
-    <!--AQUI EMPIEZA EL COMPONENTE 7-->
-  
-
-    <div class="rotulo">
-      <div class="container">
-        <h1>Componente 1</h1>
-        <p class="lede">Created with pure CSS, and probably non-functional in many browsers.</p> 
-      </div>
-    </div>
-
-
-    <section class="container mb-5 mt-5">
-      <div class="card border-info mb-3 " >
-        <div class="card-header">
-          <h5 class="card-title">Tarjetas e imágenes</h5>
-        </div>
-        <div class="card-body text-info row">
-          <div class="bg-light  col-xs-12 col-md-6" >          
-
-            <button id="myBtn">Open Modal</button>
-
-            <!-- The Modal -->
-            <div id="myPanel" class="panel">
-
-              <!-- Modal content -->
-              <div class="panel-content">
-                <div class="panel-header">
-                  <span class="close">&times;</span>
-                  <h2>Cabecera Componente 5</h2>
-                </div>
-                <div class="panel-body">
-                  <p>Este es un panel de información que resalta sobre el resto del texto</p>
-                  <p>Some other text...</p>
-                </div>
-                <div class="panel-footer">
-                  <h3>Modal Footer</h3>
-                </div>
+                </div> 
               </div>
-
             </div>
+          </aside>
+        </div>
+      </section>
+
+
+
+      <!--AQUI Termina EL COMPONENTE 6-->
+      <!--AQUI Termina EL COMPONENTE 6-->
+      <!--AQUI Termina EL COMPONENTE 6-->
+
+
+
+
+      <!--AQUI EMPIEZA EL COMPONENTE 7-->
+      <!--AQUI EMPIEZA EL COMPONENTE 7-->
+      <!--AQUI EMPIEZA EL COMPONENTE 7-->
+
+
+      <div class="rotulo">
+        <div class="container">
+          <h1>Componente 1</h1>
+          <p class="lede">Created with pure CSS, and probably non-functional in many browsers.</p> 
+        </div>
+      </div>
+
+
+      <section class="container mb-5 mt-5">
+        <div class="card border-info mb-3 " >
+          <div class="card-header">
+            <h5 class="card-title">Tarjetas e imágenes</h5>
           </div>
+          <div class="card-body text-info row">
+            <div class="bg-light  col-xs-12 col-md-6" >          
+
+              <button id="myBtn">Open Modal</button>
+
+              <!-- The Modal -->
+              <div id="myPanel" class="panel">
+
+                <!-- Modal content -->
+                <div class="panel-content">
+                  <div class="panel-header">
+                    <span class="close">&times;</span>
+                    <h2>Cabecera Componente 5</h2>
+                  </div>
+                  <div class="panel-body">
+                    <p>Este es un panel de información que resalta sobre el resto del texto</p>
+                    <p>Some other text...</p>
+                  </div>
+                  <div class="panel-footer">
+                    <h3>Modal Footer</h3>
+                  </div>
+                </div>
+
+              </div>
+            </div>
 
 
-          <div class="card text-white col-xs-12 col-md-6 ">
-            <div class="card-body"> 
+            <div class="card text-white col-xs-12 col-md-6 ">
+              <div class="card-body"> 
 
-              <input type="radio" name="nav" id="one" checked="checked"/>
-              <label for="one">Explicacion</label>
+                <input type="radio" name="nav" id="one" checked="checked"/>
+                <label for="one">Explicacion</label>
 
-              <input type="radio" name="nav" id="two"/>
-              <label for="two">Code</label>
+                <input type="radio" name="nav" id="two"/>
+                <label for="two">Code</label>
 
-              <input type="radio" name="nav" id="three"/>
-              <label for="three">pre</label>
+                <input type="radio" name="nav" id="three"/>
+                <label for="three">pre</label>
 
-              <article class="content one">
-
-
-                <h3>What is Lorem Ipsum?</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrum.</p>
+                <article class="content one">
 
 
-              </article>
+                  <h3>What is Lorem Ipsum?</h3>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrum.</p>
 
-              <article class="content two">
-                <h3>Where does it come from?</h3>
-                <code>Texte examplse</code>
-              </article>
 
-              <article class="content three">
-                <h3>Why do we use it?</h3>
-                <pre>code 
+                </article>
+
+                <article class="content two">
+                  <h3>Where does it come from?</h3>
+                  <code>Texte examplse</code>
+                </article>
+
+                <article class="content three">
+                  <h3>Why do we use it?</h3>
+                  <pre>code 
                   code 
                   code{}
                 </pre>      
-              </article>
+                </article>
+              </div>
+
             </div>
 
           </div>
-
         </div>
-      </div>
-    </section>
+      </section>
 
 
 
 
-</div>
+    </div>
   </body>
 </html>
