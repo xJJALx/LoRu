@@ -474,6 +474,18 @@ img:hover{
         <p>Este componente es un texto oculto, en este caso hemos creado unos banners con unas imágenes.</p>
       </div>
     </div>
+    
+     <h2>Explicacion</h2>
+    <p>Para empezar creamos un contenedor con texto dentro, en nuestro caso un h3. El h3 contendrá la imagen, pero se la añadiremos a la clase para hacer baners diferentes, le damos un tamaño del 100% para que los extremos bajen igual hacia el centro por la perspectiva del contenedor padre con <code>perspective: 800px</code>(como si observaramos desde el frente), si le damos un tamaño de la mitad o inferior conseguimos un efecto  como si observaramos un poco lado.</p>
+    
+    <p>La propiedad <code>transform</code> de CSS3 nos da la habilidad de transformar elementos en 2D o en 3D. Nos permite rotar, escalar, mover, torcer, etc, elementos.</p>
+    
+    <p>En <code>.cuadro h3::after</code> procedemos a añadir la cita.</p>
+    
+    <p>El contenido del h3 lo tenemos en un párrafo para que no interfiera cuando movamos las capas y poder hacerlo independientemente. Capa de sombra <code>(::before)</code>, capa con autor <code>(p)</code>, capa con imagen <code>(h3)</code> y capa con la frase del autor <code>(::after)</code>).</p>
+    
+    <p>En <code>.cuadro h3 p</code> utilizamos <code>transform: rotateX(-90deg)</code> para rotar de manera que el texto esté mirando hacia abajo, modificamos el origen de la transformacion del parrafo que está justo debajo de la imagen, ya tumado por la rotación, al darle origen top empieza desde arriba y a la vez conseguimos que se suba y se oculte detrás de la imagen antes de iniciar el efecto </p>
+    <p>Para la sombra hacemos uso de <code>::before</code>, y le damos una posicion absoluta ya que por ejemplo la posicion relativa nos hace la sombra en el punto 0,0 del .cuadro por lo que necesitamos que sea absoluta o fixed</p>
 
     <section class="container">        
       <!--BANNERS-->
