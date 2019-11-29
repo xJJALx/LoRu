@@ -15,8 +15,7 @@
 
 
 .text {
-  background-color: white;
-  color: black;
+
   font-size: 10vw; 
   font-weight: bold;
   margin: 0 auto;
@@ -27,19 +26,63 @@
   top: 35%;
   mix-blend-mode: screen;
 }
-
-
-/**
-img:hover{
-  -moz-transform: scale(1.1);
-  -webkit-transform: scale(1.1);
-  -o-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1); 
-  box-shadow: 0 4px 16px #DD0E4E; 
-
+.color9{
+  background-color: #003aff;
+  color: white;
 }
-**/
+.color8{
+  background-color: #00c9ff;
+  color: white;
+}
+.color7{
+  background-color: aqua;
+  color: black;
+}
+.color6{
+  background-color: #00ff42;
+  color: white;
+}
+.color5{
+  background-color: #ff6c00;
+  color: white;
+}
+.color4{
+  background-color: #ff00f7;
+  color: white;
+}
+.color4{
+  background-color: yellow;
+  color: black;
+}
+.color3{
+  background-color: black;
+  color: yellow;
+}
+.color2{
+  background-color: black;
+  color: white;
+}
+.color1{
+  background-color: white;
+  color: black;
+}
+
+.filter1{
+    filter: grayscale(100%);
+}
+.filter2{
+    filter: invert(100%);
+}
+.filter3{
+    filter: contrast(200%) brightness(150%);
+}
+.filter4{
+    filter:hue-rotate(130deg);
+}
+.filter0{
+    filter: brightness(60%);
+}
+
 
 
 
@@ -121,7 +164,6 @@ label:hover, input:checked + label {
   visibility: visible;
   animation: fadeout 0.5s ;
 }
-
 
 @keyframes fadein {
   from {bottom: 0; opacity: 0;}
