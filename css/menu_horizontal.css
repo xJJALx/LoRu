@@ -1,4 +1,4 @@
-  ul:hover .submenu {
+ul:hover .submenu {
   display: block;
   max-height: 400px;
 }
@@ -8,7 +8,33 @@
   -webkit-transition: all 0.5s ease-out;
 }
 
+.loader:before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  border-bottom: 0 solid #ffffff05;
 
+  box-shadow: 
+    0 -10px 20px 20px #ffffff40 inset,
+    0 -5px 15px 10px #ffffff50 inset,
+    0 -2px 5px #ffffff80 inset,
+    0 -3px 2px #ffffffBB inset,
+    0 2px 0px #ffffff,
+    0 2px 3px #ffffff,
+    0 5px 5px #ffffff90,
+    0 10px 15px #ffffff60,
+    0 10px 20px 20px #ffffff40;
+  filter: blur(3px);
+  animation: 2s rotate linear infinite;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg)
+  }
+}
 /*Cursores*/
 .grab {cursor: -webkit-grab; cursor: grab;}
 .grabbing {cursor: -webkit-grabbing; cursor: grabbing;}
@@ -142,70 +168,124 @@ CSS PARA LOS BOTONES DE COLORES HOVER
 CSS PARA LOS BOTONES DE COLORES HOVER
 CSS PARA LOS BOTONES DE COLORES HOVER
 */
-
-
+/* Establece el grosor del borde, el color original, la transicion y el tamaño*/
 .draw-border {
-  box-shadow: inset 0 0 0 4px #58afd1;
-  color: #58afd1;
-  transition: color 0.25s 0.0833333333s;
-  position: relative;
+box-shadow: inset 0 0 0 10px #58afd1;
+color: #58afd1;
+position: relative;
+height: 100px;
+width: 300px;
 }
-.black{
-  box-shadow: inset 0 0 0 4px #fff;
-
-  color: #fff;
-}
-.white{
-  box-shadow: inset 0 0 0 4px #000;
-
-  color:#000;
+/*Adopta la posicion la imagen y el boton al centro, para que estén juntos */
+.centrado {
+display: block;
+margin: auto;
 }
 
+/* Establece el borde en transparetne, que el tamaño de la caja incluya el borde y la posicion absoluta con todo a 0 para que se alinee con el elemento anterior*/
 .draw-border::before, .draw-border::after {
-  border: 0 solid transparent;
-  box-sizing: border-box;
-  content: '';
-  pointer-events: none;
-  position: absolute;
-  width: 0;
-  height: 0;
-  bottom: 0;
-  right: 0;
+border: 0 solid transparent;
+box-sizing: border-box;
+content: '';
+pointer-events: none;
+position: absolute;
+width: 0;
+height: 0;
+bottom: 0;
+right: 0;
 }
+
+/* Establece desde donde empieza a crearse el borde para la animacion, y desde donde empieza a desvanecerse */
 .draw-border::before {
-  border-bottom-width: 4px;
-  border-left-width: 4px;
+border-bottom-width: 10px;
+border-left-width: 10px;
 }
 .draw-border::after {
-  border-top-width: 4px;
-  border-right-width: 4px;
+border-top-width: 10px;
+border-right-width: 10px;
 }
+
+/* Color original. Intercambio de azul a marillo */
 .draw-border:hover {
-  color: #ffe593;
+color: #ffe593;
 }
 .draw-border:hover::before, .draw-border:hover::after {
-  border-color: #ffe593;
-  transition: border-color 0s, width 0.25s, height 0.25s;
-  width: 100%;
-  height: 100%;
-}
-.black:hover, .black:hover::before, .black:hover::after {
-  color: #000;
-  border-color: #000;
-}
-.white:hover, .white:hover::before, .white:hover::after {
-  border-color: #fff;
-  color: #fff;
-
+border-color: #ffe593;
+transition: border-color 0s, width 0.25s, height 0.25s;
+width: 100%;
+height: 100%;
 }
 
+/* Establece el tiempo de las transiciones tanto para la aparicion con el hover como para el fadeout cuando quitamos el raton */
 .draw-border:hover::before {
-  transition-delay: 0s, 0s, 0.25s;
+transition-delay: 0s, 0s, 0.25s;
 }
 .draw-border:hover::after {
-  transition-delay: 0s, 0.25s, 0s;
+transition-delay: 0s, 0.25s, 0s;
 }
 
+/* Establece el grosor */
+.draw-border::before {
+  border-bottom-width: 10px;
+  border-left-width: 10px;
+}
+.draw-border::after {
+  border-top-width: 10px;
+  border-right-width: 10px;
+}
+
+/* Todos los colores con su estado original y su estado en el color invertido / distinto en el hover (ya que tienen animacion)/
+
+/* Intercambio de negro a blanco */
+.white {
+box-shadow: inset 0 0 0 10px #000;
+color:#000;
+}
+.white:hover, .white:hover::before, .white:hover::after {
+border-color: #fff;
+color: #fff;
+}
+
+/* Intercambio de verde a azul clarito */
+.green{
+box-shadow: inset 0 0 0 10px #21ff8c;
+color:#21ff8c;
+}
+.green:hover, .green:hover::before, .green:hover::after {
+border-color: #73fff8;
+color: #73fff8;
+}
+
+
+/* Intercambio fucsia a rosa */
+.pink{
+box-shadow: inset 0 0 0 10px #ff00c3;
+color:#ff00c3;
+}
+.pink:hover, .pink:hover::before, .pink:hover::after {
+border-color: #ffa6f8;
+color: #ffa6f8;
+}
+
+/* Intercambio coral a azul */
+.orange{
+box-shadow: inset 0 0 0 10px #F08080   ;
+color:#F08080   ;
+}
+.orange:hover, .orange:hover::before, .orange:hover::after {
+border-color: #3498DB;
+color: #3498DB;
+}
+
+/* Inertercambio de rojo a azul oscuro */
+.red{
+  box-shadow: inset 0 0 0 10px #e80f00   ;
+  color:#e80f00   ;
+}
+.red:hover, .red:hover::before, .red:hover::after {
+  border-color: #4000ff;
+  color: #4000ff;
+}
 /*
 CSS PARA LOS BOTONES DE COLORES HOVER
 CSS PARA LOS BOTONES DE COLORES HOVER
