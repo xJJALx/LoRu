@@ -4,7 +4,10 @@ pre {
   color: white;
 }
 
-
+.contenedor{
+  padding-left: 10%;
+  padding-right: 10%;
+}
 
 
 /********************* PORTADA *********************/
@@ -57,12 +60,12 @@ pre {
 
 
 
-/********************* JUMBOTRON (RÓTULOS) *********************/
+/********************* RÓTULOS *********************/
 
 .rotulo {
   background-color: #e9ecef;
   background: linear-gradient(to left, #1f1c2c, #928dab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  height: 22vh;
+  height: 33vh;
 }
 
 /*XXXXXXXXXXXXXXXXXXXX INTERFIEREN LOS FONTSIZE¿? XXXXXXXXXXXXXXXXXXXXXX*/
@@ -79,11 +82,25 @@ pre {
 
 
 
+/********************* COMÚN DE LOS NAVS *********************/
+
+nav ul {
+  list-style: none;  
+}
+
+a:link {
+  text-decoration:none;
+}
+
+
+
+
 /********************* NAV HORIZONTAL *********************/
 
 .menu-fijo {
   z-index: 1;
   width: 100%;
+  height: 100px;
   background: #312450;
   display: flex;
   justify-content: space-between; /* distribuimos las etiquetas con espacio entre ellas, al ser dos cada una se pocisiona en un lateral */
@@ -102,6 +119,12 @@ label > h1 {
   color: aqua;
   margin: 0 1.5rem;
   text-decoration: none;
+}
+
+
+.menu-fijo li {
+  display: inline-block;
+  margin-left: 15px;
 }
 
 
@@ -130,21 +153,13 @@ input[type="checkbox"]:checked ~ nav{
   opacity: 0.9;  
 }
 
-nav ul {
-  list-style: none;
-}
-
-a:link {
-  text-decoration:none;
-}
-
 /* Posicionamos los elementos lista respecto al flujo normal de la página, es importante ya que sino luego con after no se ven las lineas de separacion */
-nav ul li { 
+nav  ul li { 
   position: relative;
 }
 
 /*Estilos de los links*/
-nav ul li a {
+nav  ul li a {
   line-height: 5em; /* aumentamos la separacion de las lineas de texto de la lista*/
   text-transform: uppercase;
   text-decoration: none; /*?*/
@@ -153,22 +168,22 @@ nav ul li a {
 }
 
 /* Color del link activo ¿QUITAR? XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
-nav ul li.active a {
+nav  ul li.active a {
   color: white;
 }
 
 /*¿QUITAR? ESTO VUELVE A LAS LINEAS DE COLORES DEL AFTER NO ACTIVE  MAS CLARAS*/
-nav ul li:not(.active)::after {
+nav  ul li:not(.active)::after {
   opacity: 0.3;
 }
 
 /* Color del link al posicionarnos encima menos en el active */
-nav ul li:not(.active):hover a {
+nav  ul li:not(.active):hover a {
   color: rgba(255, 255, 255, 0.75);
 }
 
 /* Líneas de separación*/
-nav ul li::after {
+nav ~ ul li::after {
   content: '';
   position: absolute;
   width: 100%;
@@ -203,7 +218,7 @@ nav ul li::after {
   height: 100%;
   background: inherit; 
   position: absolute;
-  top: 0 ;
+  top: 0;
   filter: blur(10px);
 }
 
@@ -222,7 +237,7 @@ nav ul li::after {
 /*Propiedades y tamaño del tablero de pestañas*/
 .tabs {
   position: relative;   
-  min-height: 200px;
+  min-height: 250px;
   margin: 25px ;
 }
 
@@ -255,11 +270,11 @@ nav ul li::after {
   color: white;
   /*Para determinar la distancia entre los margenes del elemento y de su bloque contenedor. usamos las propiedades left, rigth, bottom y top, asi cada pestaña mantiene su posicion y oculta a las demás, si queremos un efecto en el que se vean una encima de otra y se vea un poco el borde podemos quitar estas propiedades o darles valores diferentes */
   position: absolute; /*Posicion para que ocupe siempre el mismo sitio al seleccionar la pestaña*/
-  top: 30px; /*lo alejamos de la parte superior*/
+  top: 50px; /*lo alejamos de la parte superior*/
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 20px;
+  padding: 10px;
 }
 
 /* Efecto al mostrar el contenido */
@@ -439,27 +454,10 @@ nav ul li::after {
   margin-right: 5%;
 }
 
-/* Posición y color del botón */
-.boton {
-  position:relative; /*asi lo podemos mover a la posición deseada*/
-  left: 10%;
-  color: #4A235A;
-  background: transparent; 
-  border-color: #4A235A;
-}
-
-.boton:hover {
-  background-color: #380B61;
-  color: white;
-  box-shadow: 0 4px 16px black;
-  transition: all 0.2s ease;
-}
-
 .tarjeta {
-  color: white;
-  width: 250px;
-  height: 350px;
-  border: 1px solid #4A235A;
+  width: 350px;
+  height: 450px;
+  border: 4px solid #380B61;
   border-radius: 5px;
   margin: auto;
   margin-bottom: 50px;
@@ -473,17 +471,59 @@ nav ul li::after {
 /* Tamaño de las imágenes de las tarjetas */
 .tarjeta img {
   width: 100%;
-  height: 150px;
+  height: 200px;
 }
 
-/* Efecto aumentar imagen */
-.tarjeta img:hover {
-  -moz-transform: scale(1.1);
-  -webkit-transform: scale(1.1);
-  -o-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
+
+.cabecera {
+  position: relative;
+  width: 100%;
+}
+
+.cubrir {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #380B61;
+}
+
+.cabecera:hover .cubrir {
+  opacity: 1;
+}
+
+.texto_cubierto {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.botonCard{
+  position: absolute;
+  color: #fff;
+  background-color: #380B61;;
+  width: 50%;
+  height: 15%;
+  border-radius: 5px;
+  margin-top: 15%;
+  margin-left: 24%
+}
+
+.botonCard:hover{
+  background-color: #4b0082;
+  color: white;
   box-shadow: 0 4px 16px black;
+  transition: all 0.2s ease;
 }
 
 
