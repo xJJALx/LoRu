@@ -1,18 +1,3 @@
-.backgroundFixed{
-  background-image: url(../img/fondo.jpg) ;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: white;
-  height: 100vh;
-  margin:0px;
-  padding: 0px;
-}
-
-
-/* DE AQUI PARA ABAJO HAY QUE REVISAR, EL FONDO DE ARRIBA YA ESTA EN INDEX,CSS*/
-
 
 .text {
 
