@@ -1,0 +1,194 @@
+*{
+    filter: grayscale(00%);
+}
+
+
+
+
+body {
+  --color: #fff;
+  --global: #000;
+}
+
+
+
+.theme__color {
+  margin: 0.5rem;
+
+}
+
+.theme__input {
+  opacity: 0;
+  
+}
+.theme__input:checked + .theme__icon {
+    --global: #000;
+
+  box-shadow: 0 0 0 0.5rem var(--global), 0 0 0 0.6rem #fff;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.theme__input:focus + .theme__icon {
+    --global: #fff;
+
+  box-shadow: 0 0 0 0.5rem var(--global), 0 0 0 0.6rem #fff;
+}
+
+
+.container:hover {
+  transform:0.5s;
+    filter: grayscale(100%);
+  
+}
+.theme__icon {
+  display: inline-block;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50rem;
+  background: var(--color);
+  -webkit-transform: scale(0.6);
+          transform: scale(0.6);
+  transition: .2s;
+}
+
+[data-theme="green"]{ç
+  background-color: #fff;
+
+}
+.grey{
+  background-color: #bfbfbf;
+}
+
+
+.switches[data-theme="green"] {
+  --primary-light:#000;
+  --primary-dark: #000;
+  --ripple:#000;
+  --focus:#000;
+}
+.switches[data-theme="blue"] {
+  --primary-light: #fff;
+  --primary-dark: #fff;
+  --ripple: #fff;
+  --focus: #fff;
+}
+
+
+/***********************/
+
+
+
+
+
+
+
+header{
+  background-image: url(../img/fondo1.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  height: 100vh;
+}
+
+
+img:hover{
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1); /* escalado de imagen para aumentar */
+  box-shadow: 0 4px 16px #DD0E4E; /* sombra detrás de la imagen */
+ 
+}
+
+section > div{
+   box-shadow: 0 4px 16px #23A0D0;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*RAFA CODE FOR BUTTONS*/
+.draw-border {
+  box-shadow: inset 0 0 0 4px #58afd1;
+  color: #58afd1;
+  transition: color 0.25s 0.0833333333s;
+  position: relative;
+}
+.black{
+    box-shadow: inset 0 0 0 4px #fff;
+
+    color: #fff;
+}
+.white{
+    box-shadow: inset 0 0 0 4px #000;
+
+  color:#000;
+}
+
+.draw-border::before, .draw-border::after {
+  border: 0 solid transparent;
+  box-sizing: border-box;
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 0;
+  right: 0;
+}
+.draw-border::before {
+  border-bottom-width: 4px;
+  border-left-width: 4px;
+}
+.draw-border::after {
+  border-top-width: 4px;
+  border-right-width: 4px;
+}
+.draw-border:hover {
+  color: #ffe593;
+}
+.draw-border:hover::before, .draw-border:hover::after {
+  border-color: #ffe593;
+  transition: border-color 0s, width 0.25s, height 0.25s;
+  width: 100%;
+  height: 100%;
+}
+.black:hover, .black:hover::before, .black:hover::after {
+    color: #000;
+    border-color: #000;
+}
+.white:hover, .white:hover::before, .white:hover::after {
+    border-color: #fff;
+      color: #fff;
+
+}
+
+.draw-border:hover::before {
+  transition-delay: 0s, 0s, 0.25s;
+}
+.draw-border:hover::after {
+  transition-delay: 0s, 0.25s, 0s;
+}
+
+.btnn {
+    position: relative;
+  border: none;
+  cursor: pointer;
+  line-height: 1.5;
+  font: 700 1.2rem 'Roboto Slab', sans-serif;
+  padding: 1em 2em;
+  letter-spacing: 0.05rem;
+}
+.btnn:focus {
+  outline: 2px dotted #55d7dc;
+}
