@@ -1,29 +1,581 @@
-.componenteUno {
+/********************* BODY - EN COMÚN *********************/
+
+pre {
+  color: white;
+}
+
+
+
+
+/********************* PORTADA *********************/
+
+.backgroundFixed{
+  background-image: url(../img/fondo.jpg) ;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  height: 100vh;
+  margin:0px;
+  padding: 0px;
+}
+
+
+
+
+/********************* DIVS FONDO POR SECCION *********************/
+
+/* Estilos comunes del fondo contenedor de componentes */
+.componenteUno, .componenteDos, .componenteTres, .componenteCuatro {
   width: 100%;
-  min-height: 70vh; /* le damos solo un minimo para que sea responsive el fondo*/
+  min-height: 70vh; /* le damos solo un minimo para un fondo responsive */
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   background-position: top;
+  padding: 5%;
+}
+
+/* Imágenes individuales por componente*/
+.componenteUno{
   background-image:url(../img/lake.jpg);
 }
 
+.componenteDos{
+  background-image:url(../img/background-1409125_1280.png);
+}
+
 .componenteTres{
-  width: 100%;
-  min-height: 70vh; /* le damos solo un minimo para que sea responsive el fondo*/
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: top;
   background-image:url(../img/mountain.png);
 }
 
 .componenteCuatro{
-  width: 100%;
-  min-height: 70vh; /* le damos solo un minimo para que sea responsive el fondo*/
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: top;
   background-image:url(../img/31270.jpg);
 }
+
+
+
+
+/********************* JUMBOTRON (RÓTULOS) *********************/
+
+.rotulo {
+  background-color: #e9ecef;
+  background: linear-gradient(to left, #1f1c2c, #928dab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 22vh;
+}
+
+/*XXXXXXXXXXXXXXXXXXXX INTERFIEREN LOS FONTSIZE¿? XXXXXXXXXXXXXXXXXXXXXX*/
+.rotulo h1, .rotulo p { 
+  padding-top: 1.6em;
+  margin: auto;
+  font-size: 1.5em;
+}
+
+.rotulo h1 {
+  font-size: 2.9em;
+}
+
+
+
+
+/********************* NAV HORIZONTAL *********************/
+
+.menu-fijo {
+  z-index: 1;
+  width: 100%;
+  background: #312450;
+  display: flex;
+  justify-content: space-between; /* distribuimos las etiquetas con espacio entre ellas, al ser dos cada una se pocisiona en un lateral */
+  align-items: center; /* alineamos al centro los links, asi se ajusta al tamaño del nav */
+  padding: 0 5rem;
+  position: sticky; /* Si lo queremos que nos acompañe al hacer scroll*/
+  top: 0px;
+  border-bottom: solid 3px rgba(255, 255, 255, 0.75);
+}
+
+label > h1 {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.enlace-menu {
+  color: aqua;
+  margin: 0 1.5rem;
+  text-decoration: none;
+}
+
+
+
+
+/********************* NAV VERTICAL *********************/
+
+.sidebar {
+  position: fixed;
+  width: 350px;
+  left: -350px;
+  height: 100vh;
+  background: #312450;
+  z-index: 100; /* aseguramos que esté por encima */
+}
+
+/* Ocultamos la casilla check*/
+input[type="checkbox"]{
+  display: none; 
+}
+
+/* Usamos el selector hermano general para cuando esté activado el input, despliege el nav*/
+input[type="checkbox"]:checked ~ nav{
+  transition-duration: 1.0s;
+  transform: translateX(350px);
+  opacity: 0.9;  
+}
+
+nav ul {
+  list-style: none;
+}
+
+a:link {
+  text-decoration:none;
+}
+
+/* Posicionamos los elementos lista respecto al flujo normal de la página, es importante ya que sino luego con after no se ven las lineas de separacion */
+nav ul li { 
+  position: relative;
+}
+
+/*Estilos de los links*/
+nav ul li a {
+  line-height: 5em; /* aumentamos la separacion de las lineas de texto de la lista*/
+  text-transform: uppercase;
+  text-decoration: none; /*?*/
+  letter-spacing: 0.4em;
+  color: aqua;
+}
+
+/* Color del link activo ¿QUITAR? XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+nav ul li.active a {
+  color: white;
+}
+
+/*¿QUITAR? ESTO VUELVE A LAS LINEAS DE COLORES DEL AFTER NO ACTIVE  MAS CLARAS*/
+nav ul li:not(.active)::after {
+  opacity: 0.3;
+}
+
+/* Color del link al posicionarnos encima menos en el active */
+nav ul li:not(.active):hover a {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* Líneas de separación*/
+nav ul li::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4%; /* altura de content, como es color lo que le damos podemos jugar y hacer líneas o un fondo por detrás, pero interfiere con el .active*/
+  left: 0; /* valores para que no se desplacen al lado del texto*/
+  bottom: 0;
+  background-image: linear-gradient(to right, #5e42a6, #b74e91); /* línea efecto degradado*/
+}
+
+
+
+
+/********************* TABLERO DE CRISTAL OPACO *********************/
+
+/*Propiedades y tamaño del tablero de cristal*/
+.tablero-cristal {
+  position: relative;
+  min-width: 500px;
+  max-width: 100vh;
+  height: 350px;
+  margin: auto;
+  background: inherit;
+  border-radius: 5px;
+  overflow: hidden; /* ocultamos el efecto de desenfoque si se sale de la caja */
+  box-shadow: inset 20px 20px 200px -70px #B3B6B7; /*sombra interior, asi logramos un efecto mas cercano a un cristal*/
+}
+
+/* Efecto de cristal opaco */
+.tablero-cristal::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: inherit; 
+  position: absolute;
+  top: 0 ;
+  filter: blur(10px);
+}
+
+/* Sobreponemos el contenido por delante del desenfoque */
+.contenido-cristal {
+  padding: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+
+
+
+/********************* PESTAÑAS *********************/
+
+/*Propiedades y tamaño del tablero de pestañas*/
+.tabs {
+  position: relative;   
+  min-height: 200px;
+  margin: 25px ;
+}
+
+/*Estilos pestañas*/
+.tab {
+  float: left; /*flotamos las pestañas para tenerlas juntas en linea*/
+}
+
+.tab label {
+  /*Dependiendo del la posicion que le demos a las pestañas (ej:relative) se pueden superponer al tablero usando un z-index cuando la pestaña esté activa, las demas estarán por detrás y se pueden posicionar moviendolas por ejemplo con bottom, esto combinado con un border-bottom  (ej: elegir el color de fondo del tablero) nos permite un efecto que al pinchar en la pestaña se combinen pestaña y tablero, no se ve el borde inferior pero si los laterales. */
+  color: white;
+  padding: 10px; 
+  border-radius: 10px;   
+  position: relative;
+  bottom: 20px; /*alejamos las pestañas de los contenidos*/
+  box-shadow: inset 2px 2px 15px -7px #B3B6B7
+} 
+
+.tab [type=radio] {
+  display: none;   /*ocultamos el input radio*/
+}
+
+[type=radio]:checked ~ label {
+  background: #ddd; /*color pestaña activa*/
+  z-index: 2; /*aumentamos el index para verla por encima del tablero de contenidos*/
+}
+
+/* Propiedades y tamaño del tablero de contenidos */
+.content-tab {
+  color: white;
+  /*Para determinar la distancia entre los margenes del elemento y de su bloque contenedor. usamos las propiedades left, rigth, bottom y top, asi cada pestaña mantiene su posicion y oculta a las demás, si queremos un efecto en el que se vean una encima de otra y se vea un poco el borde podemos quitar estas propiedades o darles valores diferentes */
+  position: absolute; /*Posicion para que ocupe siempre el mismo sitio al seleccionar la pestaña*/
+  top: 30px; /*lo alejamos de la parte superior*/
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 20px;
+}
+
+/* Efecto al mostrar el contenido */
+.content-tab > * {
+  /*La transicion 
+  All: todas las propiedades que puedan tener una transición animada la tendrán.
+  0.7 es la velocidad a la que se reproducirá
+  ease es el valor del timing-function, eso determina la ejecucion, aumenta la velocidadahacia la mitad de la transicion y disminuyendola al final, con ease-in comienza lento y va aumentando
+  */
+  opacity: 0; /*Asi ocultamos el contenido de las demas pestañas y evitamos que se solapen, ya que no tenemos un background color que las oculte*/
+
+  -webkit-transform: translateX(-100%);
+  -moz-transform:    translateX(-100%);
+  -ms-transform:     translateX(-100%);
+  -o-transform:      translateX(-100%);
+  -webkit-transition: all 0.7s ease;
+  -moz-transition:    all 0.7s ease;
+  -ms-transition:     all 0.7s ease;
+  -o-transition:      all 0.7s ease;
+}
+
+[type=radio]:checked ~ label ~ .content-tab { 
+  z-index: 1;
+  overflow: auto; /*Si el texto excede se añade la barra de scroll*/
+}
+
+/*Posicion inicial del contenido*/
+[type=radio]:checked ~ label ~ .content-tab > * {
+  /*Incluimos la posicion inicial para asegurarnos que el efecto de transicion se ejecute correctamente cuando estemos mostrando el contenido de una pestaña*/
+  opacity: 1;
+  -webkit-transform: translateX(0);
+  -moz-transform:    translateX(0);
+  -ms-transform:     translateX(0);
+  -o-transform:      translateX(0);
+}
+
+
+
+
+/********************* COMPONENTE BUTTON *********************/
+
+/* Establece el grosor del borde, el color original, la transicion y el tamaño*/
+.draw-border {
+  box-shadow: inset 0 0 0 10px #58afd1;
+  color: #58afd1;
+  position: relative;
+  height: 100px;
+  width: 300px;
+}
+
+/*Adopta la posicion la imagen y el boton al centro, para que estén juntos */
+.centrado {
+  display: block;
+  margin: auto;
+}
+
+/* Establece el borde en transparetne, que el tamaño de la caja incluya el borde y la posicion absoluta con todo a 0 para que se alinee con el elemento anterior */
+.draw-border::before, .draw-border::after {
+  border: 0 solid transparent;
+  box-sizing: border-box;
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 0;
+  right: 0;
+}
+
+/* Establece desde donde empieza a crearse el borde para la animacion, y desde donde empieza a desvanecerse */
+.draw-border::before {
+  border-bottom-width: 10px;
+  border-left-width: 10px;
+}
+
+.draw-border::after {
+  border-top-width: 10px;
+  border-right-width: 10px;
+}
+
+/* Color original. Intercambio de azul a marillo */
+.draw-border:hover {
+  color: #ffe593;
+}
+
+.draw-border:hover::before, .draw-border:hover::after {
+  border-color: #ffe593;
+  transition: border-color 0s, width 0.25s, height 0.25s;
+  width: 100%;
+  height: 100%;
+}
+
+/* Establece el tiempo de las transiciones tanto para la aparicion con el hover como para el fadeout cuando quitamos el raton */
+.draw-border:hover::before {
+  transition-delay: 0s, 0s, 0.25s;
+}
+
+.draw-border:hover::after {
+  transition-delay: 0s, 0.25s, 0s;
+}
+
+/* Establece el grosor */
+.draw-border::before {
+  border-bottom-width: 10px;
+  border-left-width: 10px;
+}
+
+.draw-border::after {
+  border-top-width: 10px;
+  border-right-width: 10px;
+}
+
+/* Todos los colores con su estado original y su estado en el color invertido / distinto en el hover (ya que tienen animacion)/
+/* Intercambio de negro a blanco */
+.white {
+  box-shadow: inset 0 0 0 10px #000;
+  color:#000;
+}
+
+.white:hover, .white:hover::before, .white:hover::after {
+  border-color: #fff;
+  color: #fff;
+}
+
+/* Intercambio de verde a azul clarito */
+.green{
+  box-shadow: inset 0 0 0 10px #21ff8c;
+  color:#21ff8c;
+}
+
+.green:hover, .green:hover::before, .green:hover::after {
+  border-color: #73fff8;
+  color: #73fff8;
+}
+
+/* Intercambio fucsia a rosa */
+.pink{
+  box-shadow: inset 0 0 0 10px #ff00c3;
+  color:#ff00c3;
+}
+
+.pink:hover, .pink:hover::before, .pink:hover::after {
+  border-color: #ffa6f8;
+  color: #ffa6f8;
+}
+
+/* Intercambio coral a azul */
+.orange{
+  box-shadow: inset 0 0 0 10px #F08080   ;
+  color:#F08080   ;
+}
+
+.orange:hover, .orange:hover::before, .orange:hover::after {
+  border-color: #3498DB;
+  color: #3498DB;
+}
+
+/* Inertercambio de rojo a azul oscuro */
+.red{
+  box-shadow: inset 0 0 0 10px #e80f00   ;
+  color:#e80f00   ;
+}
+
+.red:hover, .red:hover::before, .red:hover::after {
+  border-color: #4000ff;
+  color: #4000ff;
+}
+
+
+
+
+/********************* COMPONENTE CARD *********************/
+
+/* Margenes de la fila de imagenes */
+.row {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+/* Posición y color del botón */
+.boton {
+  position:relative; /*asi lo podemos mover a la posición deseada*/
+  left: 10%;
+  color: #4A235A;
+  background: transparent; 
+  border-color: #4A235A;
+}
+
+.boton:hover {
+  background-color: #380B61;
+  color: white;
+  box-shadow: 0 4px 16px black;
+  transition: all 0.2s ease;
+}
+
+.tarjeta {
+  color: white;
+  width: 250px;
+  height: 350px;
+  border: 1px solid #4A235A;
+  border-radius: 5px;
+  margin: auto;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.tarjeta p, h3 {
+  padding: 10px;
+}
+
+/* Tamaño de las imágenes de las tarjetas */
+.tarjeta img {
+  width: 100%;
+  height: 150px;
+}
+
+/* Efecto aumentar imagen */
+.tarjeta img:hover {
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  box-shadow: 0 4px 16px black;
+}
+
+
+
+
+/********************* COMPONENTE BANNER *********************/
+
+.cuadro {
+  width: 90%; 
+  height: 200px;
+  perspective: 800px; /*Es importante darle perspectiva al contenedor para cuando pasemos el ratón la veamos tumbada*/
+  margin: auto;
+  margin-bottom: 10%; /*Añadimos un margen inferior por que las rotaciones y sombra ocupan posiciones fuera del contenedor, si hay algo debajo no interfieren*/
+  margin-top: 5%;
+}
+
+/* El h3 contendrá la imagen, pero se la añadiremos a la clase para hacer baners diferentes, le damos un tamaño del 100% para que los extremos bajen igual hacia el centro por la perspectiva del contenedor padre (como si observaramos desde el frente), si le damos un tamaño de la mitad o inferior conseguimos un efecto  como si observaramos un poco lado */
+.cuadro h3 {
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%; 
+  transform-style: preserve-3d; /* la propiedad transform de CSS3 nos da la habilidad de transformar elementos en 2D o en 3D. Nos permite rotar, escalar, mover, torcer, etc, elementos. En este ejercicio haremos un cubo animado que rota con 6 diferentes caras con CSS3.*/
+  transition: all 0.5s; /*A partir de 0.6 la sombra rota de más */
+}
+
+.cuadro h3::after {
+  content: "“Talk is cheap. Show me the code.”";
+  color: white;
+}
+
+
+.imagenUno{
+  background-image: url(../img/banner1.jpg);
+}
+
+.imagenDos{
+  background-image: url(../img/banner2.jpg);
+}
+
+.imagenTres{
+  background-image: url(../img/banner3.jpg);
+}
+
+/* Rotación del h3 (imagen y texto) */
+.cuadro:hover h3 {
+  transform: rotateX(75deg);
+  transform-origin: bottom; /*Para conseguir que la parte inferior no se mueva y se tumbe desde arriba originamos la rotacion desde abajo*/
+}
+
+
+/* El contenido del h3 lo tenemos en un parrafo para que no interfiera cuando movamos las capas y poder hacerlo independientemente. Capa de sombra (::before), capa con autor(<p>), capa con imagen(<h3>) y capa con la frase del autor(::after) */
+.cuadro h3 p {
+  color: black;  
+  position: relative; /* le damos una posicion de manera que podamos posicionarlo abajo y al rotar baje y sea visible */
+  top: 100%;
+  width: 100%;
+  transform-origin: top;
+  text-align: right;
+  transform: rotateX(-90deg); /* lo rotamos de manera que el texto esté mirando hacia abajo*/
+  /* modificamos el origen de la transformacion del parrafo, está justo debajo de la imagen, ya tumado por la rotación, al darle origen top empieza desde arriba y a la vez conseguimos que se suba y se oculte detrás de la imagen antes de iniciar el efecto */
+}
+
+/* Efecto sombra */
+.cuadro h3::before {
+  content: "";
+  position: absolute; /*La posicion relativa nos hace la sombra en el punto 0,0 del .cuadro por lo que necesitamos que sea absoluta o fixed*/ 
+  width: 100%;  /* ahora le damos el todo el tamaño y vemos como se pinta la sombra ocupando todo el contenedor del h3, ademas el cuadro tiene la propiedad prespectiva por lo que se adapta y adqiuere la misma forma*/
+  height: 100%; 
+  background: #9c9c9c;
+  box-shadow: 0 0 100px 50px rgba(0, 0, 0, 0.45);
+  transition: all 0.5s;
+  opacity: 0.15;
+  transform: rotateX(95deg) translateZ(-50px) scale(0.75);  /*Creamos una sombra, la tumbamos al rotarla en el eje X y y la profundidad (z) en negativo para bajarla*/
+  transform-origin: bottom; 
+}
+
+/* Esta parte es importante para que la animación no se dañe, el ::before del h3 contiene la sombra girada por lo que al posicionar el ratón encima se moverá, entonces debemos darle una posición  y un estilo */
+.cuadro:hover h3::before {
+  opacity: 0.5;
+  box-shadow: 0 0 25px 25px #9c9c9c;
+  transform: translateZ(-50px) scale(0.9); /*movemos la sombra hacia abajo cuando el raton pase por encima para mantener una distancia con el h3 y no le oculte, y lo reescalamaos en funcion del efecto de luz que queramos (como si la luz estuviera mas cerca o lejos de la imagen, asi la sombra crece o decrece) */
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,3 +1,4 @@
+/* INICIO RAFA ***********************************************************/
 ul:hover .submenu {
   display: block;
   max-height: 400px;
@@ -39,48 +40,13 @@ ul:hover .submenu {
 .grab {cursor: -webkit-grab; cursor: grab;}
 .grabbing {cursor: -webkit-grabbing; cursor: grabbing;}
 
-.rotulo {
-  background-color: #e9ecef;
-  background: linear-gradient(to left, #1f1c2c, #928dab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  height: 31vh;
-}
-
-.rotulo h1, .rotulo p {
-  padding-top: 1.6em;
-  margin: auto;
-  font-size: 1.5em;
-}
-
-.rotulo h1 {
-  font-size: 2.9em;
-}
-
 :root{
   box-sizing: content-box;
 }
-.menu-fijo {
-  z-index: 1;
-  width: 100%;
-  background: #312450;
-  display: flex;
-  justify-content: space-between; /* Distribuimos las etiquetas con espacio entre ellas, al ser dos cada una se pocisiona en un lateral*/
-  align-items: center; /* alineamos al centro los links, asi se ajusta al tamño del nav*/
-  padding: 0 5rem;
-  position: sticky; /* Si lo queremos que nos acompañe al hacer scrooll*/
-  top: 0px;
-  border-bottom: solid 3px rgba(255, 255, 255, 0.75);
 
-}
 
-label > h1 {
-  color: rgba(255, 255, 255, 0.75);
-}
 
-.enlace-menu {
-  color: aqua;
-  margin: 0 1.5rem;
-  text-decoration: none;
-}
+
 
 
 
@@ -160,6 +126,65 @@ body {font-family: Arial, Helvetica, sans-serif;}
   background-color: tomato;
   color: white;
 }
+
+/* FIN RAFA **************************************************************************/
+
+
+
+
+
+
+
+
+
+
+/* DESDE AQUI HASTA EL FINAL ESTÁ EN INDEX.CSS   :)  */
+
+.rotulo {
+  background-color: #e9ecef;
+  background: linear-gradient(to left, #1f1c2c, #928dab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 31vh;
+}
+
+.rotulo h1, .rotulo p {
+  padding-top: 1.6em;
+  margin: auto;
+  font-size: 1.5em;
+}
+
+.rotulo h1 {
+  font-size: 2.9em;
+}
+
+
+
+.menu-fijo {
+  z-index: 1;
+  width: 100%;
+  background: #312450;
+  display: flex;
+  justify-content: space-between; /* Distribuimos las etiquetas con espacio entre ellas, al ser dos cada una se pocisiona en un lateral*/
+  align-items: center; /* alineamos al centro los links, asi se ajusta al tamño del nav*/
+  padding: 0 5rem;
+  position: sticky; /* Si lo queremos que nos acompañe al hacer scrooll*/
+  top: 0px;
+  border-bottom: solid 3px rgba(255, 255, 255, 0.75);
+
+}
+
+label > h1 {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.enlace-menu {
+  color: aqua;
+  margin: 0 1.5rem;
+  text-decoration: none;
+}
+
+
+
+
 
 
 /*

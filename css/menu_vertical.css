@@ -1,3 +1,42 @@
+/* INICIO RAFA ****************************/
+
+#animateList a {
+  cursor: pointer;
+  -webkit-transition: padding-left 250ms ease-out;
+  -moz-transition: padding-left 250ms ease-out;
+}
+
+#animateList a:hover {
+  padding-left: 10px;   
+}
+
+
+
+
+<div class="col-4 p-0 bd-highlight order-5 botonesPlay">
+<a class="movies" href="https://x-madrid.com/playcategory/movies/">
+<img class="img2" src="https://x-madrid.com/wp-content/uploads/2019/09/palomitas.gif" alt="Movies" srcset="" sizes="(max-width: 768px) 30vw, 300px" style="transform: matrix(1, 0, 0, 1, 0, 0);">
+<img class="img1" src="https://x-madrid.com/wp-content/uploads/2019/07/movies2.jpg" alt="Movies" srcset="/wp-content/uploads/2019/07/movies2.jpg 500w, /wp-content/uploads/2019/07/movies2-300x293.jpg 300w" sizes="(max-width: 768px) 30vw, 300px">
+
+<div class="name">
+<span>Movies</span>
+</div>
+</a>
+</div>
+
+
+
+/* FIN RAFA ********************************************************************/
+
+
+
+
+
+
+
+
+
+/* DESDE AQUI HASTA EL FINAL ESTÁ EN INDEX.CSS   :)  */
 
 .sidebar {
   position: fixed;
@@ -16,42 +55,16 @@ input[type="checkbox"]{
 
 
 /* Usamos el selector hermano general para cuando esté activado el input despliege el nav*/
-
-
-
 input[type="checkbox"]:checked ~ nav{
   transition-duration: 1.0s;
   transform: translateX(350px);
-     opacity: 0.9;
-  
-}
+  opacity: 0.9;
 
-
-
-#animateList a {
-    cursor: pointer;
-    -webkit-transition: padding-left 250ms ease-out;
-    -moz-transition: padding-left 250ms ease-out;
-}
-
-#animateList a:hover {
-    padding-left: 10px;   
 }
 
 
 
 
-<div class="col-4 p-0 bd-highlight order-5 botonesPlay">
-                <a class="movies" href="https://x-madrid.com/playcategory/movies/">
-                  <img class="img2" src="https://x-madrid.com/wp-content/uploads/2019/09/palomitas.gif" alt="Movies" srcset="" sizes="(max-width: 768px) 30vw, 300px" style="transform: matrix(1, 0, 0, 1, 0, 0);">
-                  <img class="img1" src="https://x-madrid.com/wp-content/uploads/2019/07/movies2.jpg" alt="Movies" srcset="/wp-content/uploads/2019/07/movies2.jpg 500w, /wp-content/uploads/2019/07/movies2-300x293.jpg 300w" sizes="(max-width: 768px) 30vw, 300px">
-
-                  <div class="name">
-                    <span>Movies</span>
-                  </div>
-                </a>
-</div>
-             
 
 
 

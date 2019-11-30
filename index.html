@@ -54,7 +54,7 @@
 
           document.getElementById("boton1").addEventListener("click",myFunction1,false);
           document.getElementById("boton2").addEventListener("click",myFunction2,false);
-          document.getElementById("boton3").addEventListener("click",myFunction3,false);
+
 
 
           document.getElementById("banner").addEventListener("click",cambiaColor,false);
@@ -68,6 +68,7 @@
         }
       }
 
+      //Funcion que modifica el color del componente 1 Boton, Cambia el color principal y el del hover.
       //Funcion que modifica el color del componente 1 Boton, Cambia el color principal y el del hover.
       function tiposBoton(){
         var boton= document.getElementById("botonHover");
@@ -231,20 +232,14 @@
           <p>Este componente es ......</p>
           <label id="boton1" class="button" >Muestra cookies por 3 segundos</label>
           <label id="boton2" class="button" >Muestra / oculta cookies</label>
-
           <div id="snackbar">Este es el componente del panel de información</div>
-
-
-
-
-          <label class="button" for="launch2">Launch it!</label>
           <input type="checkbox" name="checkbox" id="launch2" class="modal__state">
         </div>
       </div>
 
 
       <section class="componenteUno">
-
+        <br><br><br>
         <img id="changeButon" class="centrado" src="img/change.png" alt="change icon" height="42" width="42"> 
         <button id="botonHover" class="btn centrado draw-border">Draw Border</button>
 
