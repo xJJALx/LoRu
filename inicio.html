@@ -1,14 +1,12 @@
 <!DOCTYPE html>
-<!-- Comentario -->
-
 <html lang="es">
   <head>
     <title>Web</title>
     <meta charset="utf-8">
     <meta name="description" content="Mi web">
     <meta name="author" content="Jhon">
+    <meta name="author" content="Rafa">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/index.css"> 
@@ -356,7 +354,7 @@
               </div>
               <div class="tab">
                 <input type="radio" id="tab-2" name="tab-group-1">
-                <label for="tab-2">??</label>
+                <label for="tab-2">Efecto cristal</label>
                 <div class="content-tab">
                   <p>
                     Para conseguir una sombra interior debemos añadir <code>inset</code> a <code>box-shadow</code> asi conseguimos un efecto mas cercano al cristal opaco.
@@ -592,25 +590,194 @@
         </div>
       </div>
 
-      <section class="contenedorBanner componenteCinco">        
+      <section class="contenedorBanner componenteCinco"> 
+
+        <!--Tablero de pestañas-->
+        <div class="tablero-cristal extraColor">
+          <aside class="contenido-cristal"> 
+            <div class="tabs ">
+              <div class="tab">
+                <input type="radio" id="tab-1Banner" name="tab-group-1" checked>
+                <label for="tab-1Banner">Banner</label>
+                <div class="content-tab">
+                  <h2>Explicación</h2>
+                  <p>Nota: el código completo está en la otra pestaña</p>
+                  <p>Para empezar creamos un contenedor con texto dentro, en nuestro caso un h3. El h3 contendrá la imagen, pero se la añadiremos a la clase para hacer baners diferentes, le damos un tamaño del 100% para que los extremos bajen igual hacia el centro por la perspectiva del contenedor padre con <code>perspective: 800px</code> (como si observaramos desde el frente), si le damos un tamaño de la mitad o inferior conseguimos un efecto  como si observaramos un poco de lado.</p>
+                  <pre>
+                    <code>
+                    /* Contenedor principal */
+                    .cuadro1 { 
+                      perspective: 800px; 
+                      margin-bottom: 10%; /*Añadimos un margen inferior por que las rotaciones 
+                      y sombra ocupan posiciones fuera del contenedor, si hay algo debajo no interfieren*/
+                    }
+                    </code>
+                  </pre>
+
+
+                  <p>Dentro del contenedor tendremos un texto al que le daremos estilos (y añadimos una imagén) y usamos la propiedad <code>transform</code> de CSS3 que nos da la posibilidad de transformar elementos en 2D o en 3D. Nos permite rotar, escalar, mover, torcer, etc, elementos.</p>
+                  <pre>
+                    <code>
+                    /* Contenedor principal */
+                    .cuadro1 h3 {
+                      transform-style: preserve-3d;
+                      transition: all 0.5s; /*A partir de 0.6 la sombra rota de más */
+                    }
+                    </code>
+                  </pre>
+
+
+                  <p>En <code>.cuadro h3::after{}</code> procedemos a añadir la cita o si creamos una clase para cada cuadro se la añadimos a este y obtendremos varias frases.</p>
+
+
+                  <p>El contenido del h3 lo tenemos en un párrafo para que no interfiera cuando movamos las capas y poder hacerlo independientemente. Capa de sombra <code>(::before)</code>, capa con autor <code>(p)</code>, capa con imagen <code>(h3)</code> y capa con la frase del autor <code>(::after)</code>. En <code>.cuadro h3 p</code> utilizamos <code>transform: rotateX(-90deg)</code> para rotar de manera que el texto esté mirando hacia abajo, modificamos el origen de la transformacion del parrafo que está justo debajo de la imagen, ya tumbado por la rotación. Al darle origen top empieza desde arriba y a la vez conseguimos que se suba y se oculte detrás de la imagen antes de iniciar el efecto.</p>
+                  <pre>
+                    <code>
+                    .cuadro1 h3 p { 
+                      position: relative;
+                      transform-origin: top;
+                      transform: rotateX(-90deg); /* lo rotamos de manera que el texto esté mirando hacia abajo*/
+                    }
+                    </code>
+                  </pre>
+
+                  <p>En <code>.cuadro1:hover h3{}</code> para conseguir que la parte inferior no se mueva y se tumbe desde arriba originamos la rotacion desde abajo</p>
+                  <pre>
+                    <code>
+                      /* Rotación del h3 (imagen y texto) */
+                      .cuadro1:hover h3 {
+                        transform: rotateX(75deg);
+                        transform-origin: bottom; 
+                      }
+                    </code>
+                  </pre>
+
+
+                  <p>Para la sombra hacemos uso de <code>::before</code> en el h3, y le damos una posición absoluta ya que por ejemplo la posición relativa nos hace la sombra en el punto 0,0 del .cuadro por lo que necesitamos que sea absoluta o fixed. Con <code>transform: rotateX(95deg) translateZ(-50px) scale(0.75)</code> creamos una sombra, la tumbamos al rotarla en el eje X y y la profundidad (z) en negativo para bajarla.</p>
+                  <pre>
+                    <code>
+                    .cuadro1 h3::before {
+                      content: "";
+                      position: absolute; 
+                      box-shadow: 0 0 100px 50px rgba(0, 0, 0, 0.45);
+                      transition: all 0.5s;
+                      transform: rotateX(95deg) translateZ(-50px) scale(0.75);  
+                      transform-origin: bottom; 
+                    }
+                    </code>
+                  </pre>
+
+                  <p>Por último, para que la animación no se dañe, el ::before del h3 contiene la sombra girada por lo que al posicionar el ratón encima se moverá, entonces debemos darle una posición  y un estilo, todo ello lo haremos en: <code>.cuadro:hover h3::before{}</code> </p>
+                  <pre>
+                    <code>
+                    .cuadro1:hover h3::before {
+                      opacity: 0.5;
+                      transform: translateZ(-50px) scale(0.9);            
+                    }
+                    </code>
+                  </pre>
+
+                </div> 
+              </div>
+              <div class="tab">
+                <input type="radio" id="tab-2Banner" name="tab-group-1">
+                <label for="tab-2Banner">CSS</label>
+                <div class="content-tab">
+                  <p>Estás autorizado para <kbd>ctrl</kbd> + <kbd>c</kbd> y <kbd>ctrl</kbd> + <kbd>v</kbd> 🥰</p>
+                  <pre>
+
+.banner1 h3::after {
+  content: "“Talk is cheap. Show me the code.”";
+}
+
+.imagenUno{
+  background-image: url(../img/banner1.jpg);
+}
+
+.cuadro1 {
+  width: 90%; 
+  height: 200px;
+  perspective: 800px; 
+  margin: auto;
+  margin-bottom: 10%; 
+  color: white;
+}
+
+.cuadro1 h3 {
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%; 
+  transform-style: preserve-3d; 
+  transition: all 0.5s;
+}
+
+.cuadro1 h3 p {
+  color: black;  
+  position: relative; 
+  top: 100%;
+  width: 100%;
+  transform-origin: top;
+  text-align: right;
+  transform: rotateX(-90deg); 
+}
+
+.cuadro1:hover h3 {
+  transform: rotateX(75deg);
+  transform-origin: bottom; 
+
+.cuadro1 h3::before {
+  content: "";
+  position: absolute; 
+  width: 100%;  
+  height: 100%; 
+  background: #9c9c9c;
+  box-shadow: 0 0 100px 50px rgba(0, 0, 0, 0.45);
+  transition: all 0.5s;
+  opacity: 0.15;
+  transform: rotateX(95deg) translateZ(-50px) scale(0.75); 
+  transform-origin: bottom; 
+}
+
+.cuadro1:hover h3::before {
+  opacity: 0.5;
+  box-shadow: 0 0 25px 25px #9c9c9c;
+  transform: translateZ(-50px) scale(0.9); 
+}
+
+                </pre>
+                </div> 
+              </div>
+            </div>
+          </aside>
+        </div>
+
         <!--BANNERS-->
-        <div class="cuadro banner1">
+        <div class="cuadro1 banner1">
           <h3 class="imagenUno">
             <p>Linus Torvalds</p>
           </h3>
         </div>
 
-        <div class="cuadro banner2">
+        <div class="cuadro1 banner2">
           <h3 class="imagenDos">
             <p>Santiago González. DAW2. 2019.</p>
           </h3> 
         </div>
 
-        <div class="cuadro banner3">
+        <div class="cuadro2 banner3">
           <h3 class="imagenTres">
             <p>Anónimo</p>
           </h3> 
         </div>
+
+        <div class="cuadro3 banner3">
+          <h3 class="imagenTres">
+            <p>Anónimo</p>
+          </h3> 
+        </div>
+
       </section>
       <!-- AQUI TERMINA EL COMPONENTE 5 -->
       <!-- AQUI TERMINA EL COMPONENTE 5 -->
@@ -624,6 +791,6 @@
 
     </div> <!-- FIN DIV EFECTO NOCTURNO -->
 
-
+    <footer></footer>
   </body>
 </html>
