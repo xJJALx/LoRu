@@ -13,29 +13,7 @@
 
 
     <script type="text/javascript">  // Get the panel
-      window.onload = function(){
-        var panel = document.getElementById("myPanel");
-        // Get the button that opens the panel
-        var btn = document.getElementById("myBtn");
-        var bod = document.getElementById("body");
-        // Get the <span> element that closes the panel
-        var span = document.getElementsByClassName("close")[0];
-        // When the user clicks the button, open the panel 
-        btn.onclick = function() {
-          panel.style.display = "block";
-        }
-        // When the user clicks on <span> (x), close the panel
-        span.onclick = function() {
-          panel.style.display = "none";
-        }
-        // When the user clicks anywhere outside of the panel, close it
-        window.onclick = function(event) {
-          if (event.target == panel) {
-            panel.style.display = "none";
-          }
-        }
-      }
-
+      
 
 
       document.addEventListener('readystatechange',carga_eventos,false);
@@ -47,7 +25,7 @@
           document.getElementById("boton1").addEventListener("click",myFunction1,false);
           document.getElementById("boton2").addEventListener("click",myFunction2,false);
 
-
+          document.getElementById("botonModal").addEventListener("click",panelInformacion,false);
 
           document.getElementById("banner").addEventListener("click",cambiaColor,false);
 
@@ -55,16 +33,38 @@
 
           document.getElementById("filters").addEventListener("click",filtros,false);
 
-          document.getElementById("changeButon").addEventListener("click",tiposBoton,false);
+          document.getElementById("changeButon").addEventListener("click",estadosBoton,false);
+
+          document.getElementById("cambioTarjeta").addEventListener("click",estadosTarjeta,false);
 
 
+        }
+      }
+      /*
+            <div class="cabecera">
+              <img id="imagenTarjeta" src="img/aut.jpg" alt="Avatar" class="image1">
+              <div id="efectoCubrir" class="cubrir1">
+                <div id="textoCubrir" class="texto_cubierto1">Jhon</div>
+*/
+      function estadosTarjeta(){
+        var imagenTarjeta= document.getElementById("imagenTarjeta");
+        var efectoCubrir= document.getElementById("efectoCubrir");
+        var textoCubrir= document.getElementById("textoCubrir");
+
+        if(imagenTarjeta.className=="image1"){
+          imagenTarjeta.className="image2";
+          efectoCubrir.className="cubrir2";
+          textoCubrir.className="texto_cubierto2";
+        }else{
+          imagenTarjeta.className="image1";
+          efectoCubrir.className="cubrir1";
+          textoCubrir.className="texto_cubierto1";
         }
       }
 
 
       //Funcion que modifica el color del componente 1 Boton, Cambia el color principal y el del hover.
-      //Funcion que modifica el color del componente 1 Boton, Cambia el color principal y el del hover.
-      function tiposBoton(){
+      function estadosBoton(){
         var boton= document.getElementById("botonHover");
         if(boton.className=="btn centrado draw-border"){
           boton.className="btn centrado draw-border white";
@@ -108,6 +108,30 @@
           x.className = "show1";
         }
       }
+
+      function panelInformacion(){
+        var panel = document.getElementById("panelModal");
+        // Get the button that opens the panel
+        var btn = document.getElementById("botonModal");
+        var bod = document.getElementById("body");
+        // Get the <span> element that closes the panel
+        var span = document.getElementsByClassName("close")[0];
+        // When the user clicks the button, open the panel 
+        btn.onclick = function() {
+          panel.style.display = "block";
+        }
+        // When the user clicks on <span> (x), close the panel
+        span.onclick = function() {
+          panel.style.display = "none";
+        }
+        // When the user clicks anywhere outside of the panel, close it
+        window.onclick = function(event) {
+          if (event.target == panel) {
+            panel.style.display = "none";
+          }
+        }
+      }
+
       function moon(){
         var body= document.getElementById("body");
         if(body.className=="filter0"){
@@ -286,11 +310,11 @@
               <button class="botonCard" >GO</button>
             </div>
           </div>
-          <div class="tarjeta">
+          <div id="cambioTarjeta" class="tarjeta">
             <div class="cabecera">
-              <img src="img/aut.jpg" alt="Avatar" class="image1">
-              <div class="cubrir1">
-                <div class="texto_cubierto1">Jhon</div>
+              <img id="imagenTarjeta" src="img/aut.jpg" alt="Avatar" class="image1">
+              <div id="efectoCubrir" class="cubrir1">
+                <div id="textoCubrir" class="texto_cubierto1">Jhon</div>
               </div>
               <h3>Título</h3>
               <p>Texto descriptivo</p>
@@ -521,10 +545,10 @@
       <section class="componenteTres contenedor">
 
 
-        <button id="myBtn">Open Modal</button>
+        <button id="botonModal">Open Modal</button>
 
         <!-- The Modal -->
-        <div id="myPanel" class="panel">
+        <div id="panelModal" class="panel">
 
           <!-- Modal content -->
           <div class="panel-content">
