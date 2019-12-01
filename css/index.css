@@ -1,10 +1,9 @@
 /********************* BODY - EN COMÚN *********************/
 pre {
-  color: white;
+  color: aqua;
 }
 
-
-:root{
+:root {
   box-sizing: border-box;
 }
 * {
@@ -15,31 +14,32 @@ pre {
   padding-left: 10%;
   padding-right: 10%;
 }
-.contenedorBanner{
- padding-left: 10%;
+.contenedorBanner {
+  padding-left: 10%;
   padding-right: 10%;
   padding-top: 5%;
   padding-bottom: 5%;
-
-
 }
 
-
-/* Filtros de presentacion que cambian la apariencia de toda la página */
+/* Filtros de presentación que cambian la apariencia de toda la página */
 .filter1 {
-    filter: grayscale(100%);
+  filter: grayscale(100%);
 }
+
 .filter2 {
-    filter: invert(100%);
+  filter: invert(100%);
 }
+
 .filter3 {
-    filter: contrast(200%) brightness(150%);
+  filter: contrast(200%) brightness(150%);
 }
+
 .filter4 {
-    filter: hue-rotate(130deg);
+  filter: hue-rotate(130deg);
 }
+
 .filter0 {
-    filter: brightness(60%);
+  filter: brightness(60%);
 }
 
 /********************* BODY - EN COMÚN *********************/
@@ -47,7 +47,7 @@ pre {
 
 
 /********************* PORTADA *********************/
-.backgroundFixed{
+.backgroundFixed {
   background-image: url(../img/fondo.jpg) ;
   background-attachment: fixed;
   background-position: center;
@@ -74,39 +74,47 @@ pre {
   mix-blend-mode: screen;
 }
 
-.color9{
+.color9 {
   background-color: #003aff;
   color: white;
 }
-.color8{
+
+.color8 {
   background-color: #00c9ff;
   color: white;
 }
-.color7{
+
+.color7 {
   background-color: aqua;
   color: black;
 }
-.color6{
+
+.color6 {
   background-color: #00ff42;
   color: white;
 }
-.color5{
+
+.color5 {
   background-color: #ff6c00;
   color: white;
 }
+
 .color4{
   background-color: yellow;
   color: black;
 }
-.color3{
+
+.color3 {
   background-color: #ff00f7;
   color: white;
 }
-.color2{
+
+.color2 {
   background-color: black;
   color: white;
 }
-.color1{
+
+.color1 {
   background-color: white;
   color: black;
 }
@@ -116,7 +124,7 @@ pre {
 
 /********************* DIVS FONDO POR SECCION *********************/
 /* Estilos comunes del fondo contenedor de componentes */
-.componenteUno, .componenteDos, .componenteTres, .componenteCuatro {
+.componenteUno, .componenteDos, .componenteTres, .componenteCuatro, .componenteCinco {
   width: 100%;
   min-height: 70vh; /* le damos solo un minimo para un fondo responsive */
   background-repeat: no-repeat;
@@ -144,10 +152,11 @@ pre {
 }
 
 .componenteCinco {
-  background-image:url(../img/blur.jpg);
-  background-repeat: no-repeat;
+  background-image:url(../img/blur1.jpg);
 }
 /********************* DIVS FONDO POR SECCION *********************/
+
+
 
 
 /********************* RÓTULOS *********************/
@@ -178,7 +187,7 @@ pre {
 }
 
 .rotulo p {
-    padding-left: 5em;
+  padding-left: 5em;
 
   font-size: 1.9em;
 }
@@ -227,7 +236,7 @@ label > h1 {
 .grab {
   cursor: -webkit-grab; cursor: grab;
 }
-
+/********************* NAV HORIZONTAL *********************/
 
 
 
@@ -243,13 +252,13 @@ label > h1 {
   z-index: 100; /* aseguramos que esté por encima */
 }
 
-/* Ocultamos la casilla check*/
-input[type="checkbox"]{
+/* Ocultamos la casilla check */
+input[type="checkbox"] {
   display: none; 
 }
 
-/* Usamos el selector hermano general para cuando esté activado el input, despliege el nav*/
-input[type="checkbox"]:checked ~ nav{
+/* Usamos el selector hermano general para cuando esté activado el input, despliege el nav */
+input[type="checkbox"]:checked ~ nav {
   transition-duration: 1.0s;
   transform: translateX(350px);
   opacity: 0.9;  
@@ -260,16 +269,15 @@ nav ul li {
   position: relative;
 }
 
-/*Estilos de los links*/
+/* Estilos de los links */
 nav ul li a {
-  line-height: 5em; /* aumentamos la separacion de las lineas de texto de la lista*/
+  line-height: 5em; /* aumentamos la separacion de las lineas de texto de la lista */
   text-transform: uppercase;
-  text-decoration: none; /*?*/
   letter-spacing: 0.4em;
   color: aqua;
 }
 
-/* Clase que hay que cambiar para dejar marcado en la barra de navegación la página en la que nos encontramos*/
+/* Clase que hay que cambiar para dejar marcado en la barra de navegación la página en la que nos encontramos */
 nav ul li.active a {
   color: white;
 }
@@ -284,15 +292,15 @@ nav ul li:not(.active):hover a {
   color: rgba(255, 255, 255, 0.75);
 }
 
-/* Líneas de separación*/
+/* Líneas de separación */
 .sidebar ul li::after {
   content: '';
   position: absolute;
   width: 100%;
-  height: 4%; /* altura de content, como es color lo que le damos podemos jugar y hacer líneas o un fondo por detrás, pero interfiere con el .active*/
-  left: 0; /* valores para que no se desplacen al lado del texto*/
+  height: 4%; /* altura de content, como es color lo que le damos podemos jugar y hacer líneas o un fondo por detrás, pero interfiere con el .active */
+  left: 0; /* valores para que no se desplacen al lado del texto */
   bottom: 0;
-  background-image: linear-gradient(to right, #5e42a6, #b74e91); /* línea efecto degradado*/
+  background-image: linear-gradient(to right, #5e42a6, #b74e91); /* línea efecto degradado */
 }
 
 /* Ligera animacion al pasar por encima de la barra de navegacion vertical */
@@ -301,6 +309,7 @@ nav ul li:not(.active):hover a {
   -webkit-transition: padding-left 250ms ease-out;
   -moz-transition: padding-left 250ms ease-out;
 }
+
 #animateList a:hover {
   padding-left: 10px;   
 }
@@ -310,18 +319,20 @@ ul:hover .submenu {
   display: block;
   max-height: 400px;
 }
+
 .submenu {
   overflow: hidden;
   max-height: 0;
   -webkit-transition: all 0.5s ease-out;
 }
+/********************* NAV VERTICAL *********************/
 
 
 
 
 /********************* TABLERO DE CRISTAL OPACO *********************/
 
-/*Propiedades y tamaño del tablero de cristal*/
+/* Propiedades y tamaño del tablero de cristal */
 .tablero-cristal {
   position: relative;
   min-width: 500px;
@@ -331,7 +342,8 @@ ul:hover .submenu {
   background: inherit;
   border-radius: 5px;
   overflow: hidden; /* ocultamos el efecto de desenfoque si se sale de la caja */
-  box-shadow: inset 20px 20px 200px -70px #B3B6B7; /*sombra interior, asi logramos un efecto mas cercano a un cristal*/
+  box-shadow: inset 20px 20px 200px -70px #B3B6B7; /* sombra interior, asi logramos un efecto mas cercano a un cristal */
+  margin-bottom: 25px;
 }
 
 /* Efecto de cristal opaco */
@@ -352,25 +364,30 @@ ul:hover .submenu {
   z-index: 1;
 }
 
+.extraColor {
+   background: linear-gradient(to left, aqua, #0c222e);
+}
+/********************* TABLERO DE CRISTAL OPACO *********************/
+
 
 
 
 /********************* PESTAÑAS *********************/
 
-/*Propiedades y tamaño del tablero de pestañas*/
+/* Propiedades y tamaño del tablero de pestañas */
 .tabs {
   position: relative;   
   min-height: 250px;
   margin: 25px ;
 }
 
-/*Estilos pestañas*/
+/* Estilos pestañas */
 .tab {
-  float: left; /*flotamos las pestañas para tenerlas juntas en linea*/
+  float: left; /* flotamos las pestañas para tenerlas juntas en linea */
 }
 
 .tab label {
-  /*Dependiendo del la posicion que le demos a las pestañas (ej:relative) se pueden superponer al tablero
+  /* Dependiendo del la posicion que le demos a las pestañas (ej:relative) se pueden superponer al tablero
   usando un z-index cuando la pestaña esté activa, las demas estarán por detrás y se pueden posicionar 
   moviendolas por ejemplo con bottom, esto combinado con un border-bottom  (ej: elegir el color de fondo del tablero)
   nos permite un efecto que al pinchar en la pestaña se combinen pestaña y tablero, no se ve el borde inferior pero si los laterales. */
@@ -378,27 +395,27 @@ ul:hover .submenu {
   padding: 10px; 
   border-radius: 10px;   
   position: relative;
-  bottom: 20px; /*alejamos las pestañas de los contenidos*/
+  bottom: 20px; /* alejamos las pestañas de los contenidos */
   box-shadow: inset 2px 2px 15px -7px #B3B6B7
 } 
 
 .tab [type=radio] {
-  display: none;   /*ocultamos el input radio*/
+  display: none;   /* ocultamos el input radio */
 }
 
 [type=radio]:checked ~ label {
-  background: #ddd; /*color pestaña activa*/
+  background: #ddd; /* color pestaña activa */
   color: black;
-  z-index: 2; /*aumentamos el index para verla por encima del tablero de contenidos*/
+  z-index: 2; /* aumentamos el index para verla por encima del tablero de contenidos */
 }
 
 /* Propiedades y tamaño del tablero de contenidos */
 .content-tab {
   color: white;
-  /*Para determinar la distancia entre los margenes del elemento y de su bloque contenedor. usamos las propiedades left,
-   rigth, bottom y top, asi cada pestaña mantiene su posicion y oculta a las demás, si queremos un efecto en el que se vean 
-   una encima de otra y se vea un poco el borde podemos quitar estas propiedades o darles valores diferentes */
-  position: absolute; /*Posicion para que ocupe siempre el mismo sitio al seleccionar la pestaña*/
+  /* Para determinar la distancia entre los margenes del elemento y de su bloque contenedor. usamos las propiedades left,
+  rigth, bottom y top, asi cada pestaña mantiene su posicion y oculta a las demás, si queremos un efecto en el que se vean 
+  una encima de otra y se vea un poco el borde podemos quitar estas propiedades o darles valores diferentes */
+  position: absolute; /* posicion para que ocupe siempre el mismo sitio al seleccionar la pestaña */
   top: 50px; /*lo alejamos de la parte superior*/
   left: 0;
   right: 0;
@@ -413,7 +430,7 @@ ul:hover .submenu {
   0.7 es la velocidad a la que se reproducirá
   ease es el valor del timing-function, eso determina la ejecucion, aumenta la velocidadahacia la mitad de la transicion y disminuyendola al final, con ease-in comienza lento y va aumentando
   */
-  opacity: 0; /*Asi ocultamos el contenido de las demas pestañas y evitamos que se solapen, ya que no tenemos un background color que las oculte*/
+  opacity: 0; /* así ocultamos el contenido de las demas pestañas y evitamos que se solapen, ya que no tenemos un background color que las oculte */
 
   -webkit-transform: translateX(-100%);
   -moz-transform:    translateX(-100%);
@@ -443,6 +460,7 @@ ul:hover .submenu {
   -ms-transform:     translateX(0);
   -o-transform:      translateX(0);
 }
+/********************* PESTAÑAS *********************/
 
 
 
@@ -499,7 +517,7 @@ ul:hover .submenu {
   height: 100%;
 }
 
-/* Establece el tiempo de las transiciones tanto para la aparicion con el hover como para el fadeout cuando quitamos el raton */
+/* Establece el tiempo de las transiciones tanto para la aparición con el hover como para el fadeout cuando quitamos el ratón */
 .draw-border:hover::before {
   transition-delay: 0s, 0s, 0.25s;
 }
@@ -532,7 +550,7 @@ ul:hover .submenu {
 }
 
 /* Intercambio de verde a azul clarito */
-.green{
+.green {
   box-shadow: inset 0 0 0 10px #21ff8c;
   color:#21ff8c;
 }
@@ -543,7 +561,7 @@ ul:hover .submenu {
 }
 
 /* Intercambio fucsia a rosa */
-.pink{
+.pink {
   box-shadow: inset 0 0 0 10px #ff00c3;
   color:#ff00c3;
 }
@@ -554,7 +572,7 @@ ul:hover .submenu {
 }
 
 /* Intercambio coral a azul */
-.orange{
+.orange {
   box-shadow: inset 0 0 0 10px #F08080   ;
   color:#F08080   ;
 }
@@ -565,7 +583,7 @@ ul:hover .submenu {
 }
 
 /* Inertercambio de rojo a azul oscuro */
-.red{
+.red {
   box-shadow: inset 0 0 0 10px #e80f00   ;
   color:#e80f00   ;
 }
@@ -581,7 +599,7 @@ ul:hover .submenu {
 
 
 /********************* COMPONENTE CARD *********************/
-/* Margenes de la fila de imagenes */
+/* Común a Card */
 .row {
   margin-left: 5%;
   margin-right: 5%;
@@ -601,34 +619,34 @@ ul:hover .submenu {
   padding: 10px;
 }
 
-/* Tamaño de las imágenes de las tarjetas */
-.tarjeta img {
-  width: 100%;
-  height: 200px;
-}
-
 .cabecera {
   position: relative;
 }
 
-.cubrir {
+/****** Card 1 *****/
+.image1 {
+  width: 100%;
+  height: 200px;
+}
+
+.cabecera:hover .cubrir1 {
+  opacity: 0.9;
+}
+
+.cubrir1 {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   width: 100%;
-  height: 65%;
+  height: 66%;
   opacity: 0;
   transition: .5s ease;
   background-color: #380B61;
 }
 
-.cabecera:hover .cubrir {
-  opacity: 0.9;
-}
-
-.texto_cubierto1{
+.texto_cubierto1 { 
   color: white;
   font-size: 20px;
   position: absolute;
@@ -640,7 +658,7 @@ ul:hover .submenu {
   text-align: center;
 }
 
-.botonCard{
+.botonCard {
   position: absolute;
   color: #fff;
   background-color: #380B61;;
@@ -651,13 +669,51 @@ ul:hover .submenu {
   margin-left: 24%
 }
 
-.botonCard:hover{
+.botonCard:hover {
   background-color: #4b0082;
   color: white;
   opacity: 0.8;
   box-shadow: 0 4px 16px black;
   transition: all 0.2s ease;
 }
+
+/****** Card 2 *****/
+.cabecera:hover .cubrir2 {
+  opacity: 0.9;
+}
+
+.cubrir2 {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.texto_cubierto2 {
+  background-color: #34DBD1;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+
+.tarjeta:hover .cubrir2 {
+  opacity: 1;
+}
+
+.tarjeta:hover .image2 {
+  opacity: 0.3;
+}
+
+.image2 {
+  width: 100%;
+  height: 440px;;
+}
+
 /********************* COMPONENTE CARD *********************/
 
 
@@ -736,6 +792,9 @@ ul:hover .submenu {
 }
 /********************* COMPONENTE PANEL INFORMACIÓN *********************/
 
+
+
+
 /********************* COMPONENTE PANEL COOKIES *********************/
 /* modal */
 @keyframes fade-in {
@@ -809,10 +868,12 @@ ul:hover .submenu {
   -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
   animation: fadein 1.0s, fadeout 0.5s 2.5s;
 }
+
 #snackbar.show1 {
   visibility: visible;
   animation: fadein 1.0s;
 }
+
 #snackbar.hide {
   visibility: visible;
   animation: fadeout 0.5s ;
@@ -823,7 +884,6 @@ ul:hover .submenu {
   to {bottom: 30px; opacity: 1;}
 }
 
-
 @keyframes fadeout {
   from {bottom: 30px; opacity: 1;}
   to {bottom: 0; opacity: 0;}
@@ -831,29 +891,11 @@ ul:hover .submenu {
 /********************* COMPONENTE PANEL COOKIES *********************/
 
 
+
+
 /********************* COMPONENTE BANNER *********************/
-.cuadro {
-  width: 90%; 
-  height: 200px;
-  perspective: 800px; /*Es importante darle perspectiva al contenedor para cuando pasemos el ratón la veamos tumbada*/
-  margin: auto;
-  margin-bottom: 10%; /*Añadimos un margen inferior por que las rotaciones y sombra ocupan posiciones fuera del contenedor, si hay algo debajo no interfieren*/
-  color: white;
-}
 
-/* El h3 contendrá la imagen, pero se la añadiremos a la clase para hacer baners diferentes, le damos un tamaño del 100% 
-  para que los extremos bajen igual hacia el centro por la perspectiva del contenedor padre (como si observaramos desde el frente),
-  si le damos un tamaño de la mitad o inferior conseguimos un efecto  como si observaramos un poco lado */
-.cuadro h3 {
-  background-size: cover;
-  background-position: center;
-  border-radius: 5px;
-  width: 100%;
-  height: 100%; 
-  transform-style: preserve-3d; /* la propiedad transform de CSS3 nos da la habilidad de transformar elementos en 2D o en 3D. Nos permite rotar, escalar, mover, torcer, etc, elementos. En este ejercicio haremos un cubo animado que rota con 6 diferentes caras con CSS3.*/
-  transition: all 0.5s; /*A partir de 0.6 la sombra rota de más */
-}
-
+/****** Común *****/
 .banner1 h3::after {
   content: "“Talk is cheap. Show me the code.”";
 }
@@ -876,16 +918,33 @@ ul:hover .submenu {
   background-image: url(../img/banner3.jpg);
 }
 
-/* Rotación del h3 (imagen y texto) */
-.cuadro:hover h3 {
-  transform: rotateX(75deg);
-  transform-origin: bottom; /*Para conseguir que la parte inferior no se mueva y se tumbe desde arriba originamos la rotacion desde abajo*/
+/***** Banner tipo 1 *****/
+.cuadro1 {
+  width: 90%; 
+  height: 200px;
+  perspective: 800px; /* es importante darle perspectiva al contenedor para cuando pasemos el ratón la veamos tumbada */
+  margin: auto;
+  margin-bottom: 10%; /* añadimos un margen inferior por que las rotaciones y sombra ocupan posiciones fuera del contenedor, si hay algo debajo no interfieren */
+  color: white;
+}
+
+/* El h3 contendrá la imagen, pero se la añadiremos a la clase para hacer baners diferentes, le damos un tamaño del 100% 
+para que los extremos bajen igual hacia el centro por la perspectiva del contenedor padre (como si observaramos desde el frente),
+si le damos un tamaño de la mitad o inferior conseguimos un efecto  como si observaramos un poco lado */
+.cuadro1 h3 {
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%; 
+  transform-style: preserve-3d; /* la propiedad transform de CSS3 nos da la posibilidad de transformar elementos en 2D o en 3D. Nos permite rotar, escalar, mover, torcer, etc, elementos. En este ejercicio haremos un cubo animado que rota con 6 diferentes caras con CSS3. */
+  transition: all 0.5s; /* a partir de 0.6 la sombra rota de más */
 }
 
 
 /* El contenido del h3 lo tenemos en un parrafo para que no interfiera cuando movamos las capas y poder hacerlo independientemente.
- Capa de sombra (::before), capa con autor(<p>), capa con imagen(<h3>) y capa con la frase del autor(::after) */
-.cuadro h3 p {
+Capa de sombra (::before), capa con autor(<p>), capa con imagen(<h3>) y capa con la frase del autor(::after) */
+.cuadro1 h3 p {
   color: black;  
   position: relative; /* le damos una posicion de manera que podamos posicionarlo abajo y al rotar baje y sea visible */
   top: 100%;
@@ -894,43 +953,154 @@ ul:hover .submenu {
   text-align: right;
   transform: rotateX(-90deg); /* lo rotamos de manera que el texto esté mirando hacia abajo*/
   /* modificamos el origen de la transformacion del parrafo, está justo debajo de la imagen, ya tumado por la rotación,
-   al darle origen top empieza desde arriba y a la vez conseguimos que se suba y se oculte detrás de la imagen antes de iniciar el efecto */
+  al darle origen top empieza desde arriba y a la vez conseguimos que se suba y se oculte detrás de la imagen antes de iniciar el efecto */
+}
+
+/* Rotación del h3 (imagen y texto) */
+.cuadro1:hover h3 {
+  transform: rotateX(75deg);
+  transform-origin: bottom; /*Para conseguir que la parte inferior no se mueva y se tumbe desde arriba originamos la rotacion desde abajo*/
 }
 
 /* Efecto sombra */
-.cuadro h3::before {
+.cuadro1 h3::before {
   content: "";
   position: absolute; /*La posicion relativa nos hace la sombra en el punto 0,0 del .cuadro por lo que necesitamos que sea absoluta o fixed*/ 
   width: 100%;  /* ahora le damos el todo el tamaño y vemos como se pinta la sombra ocupando todo el contenedor del h3,
   además el cuadro tiene la propiedad prespectiva por lo que se adapta y adqiuere la misma forma*/
   height: 100%; 
-  background: #9c9c9c;
+  background: black;
   box-shadow: 0 0 100px 50px rgba(0, 0, 0, 0.45);
   transition: all 0.5s;
   opacity: 0.15;
   transform: rotateX(95deg) translateZ(-50px) scale(0.75);  /*Creamos una sombra, la tumbamos al rotarla
-   en el eje X y y la profundidad (z) en negativo para bajarla*/
+  en el eje X y y la profundidad (z) en negativo para bajarla*/
   transform-origin: bottom; 
 }
 
 /* Esta parte es importante para que la animación no se dañe, el ::before del h3 contiene la sombra girada
- por lo que al posicionar el ratón encima se moverá, entonces debemos darle una posición  y un estilo */
-.cuadro:hover h3::before {
+por lo que al posicionar el ratón encima se moverá, entonces debemos darle una posición  y un estilo */
+.cuadro1:hover h3::before {
   opacity: 0.5;
   box-shadow: 0 0 25px 25px #9c9c9c;
   transform: translateZ(-50px) scale(0.9); 
   /*movemos la sombra hacia abajo cuando el raton pase por encima
-   para mantener una distancia con el h3 y no le oculte, y lo reescalamaos en funcion del efecto de luz
-    que queramos (como si la luz estuviera mas cerca o lejos de la imagen, asi la sombra crece o decrece) */
+  para mantener una distancia con el h3 y no le oculte, y lo reescalamaos en funcion del efecto de luz
+  que queramos (como si la luz estuviera mas cerca o lejos de la imagen, asi la sombra crece o decrece) */
+}
+
+/***** Banner tipo 2 *****/
+.cuadro2 {
+  width: 90%; 
+  height: 200px;
+  perspective: 1000px; 
+  margin: auto;
+  margin-bottom: 10%; 
+  color: white;
+}
+
+.cuadro2 h3 {
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%; 
+  transform-style: preserve-3d; 
+  transition: all 0.5s; 
 }
 
 
+/* Rotación del h3 (imagen y texto) */
+.cuadro2:hover h3 {
+  transform: rotateX(75deg);
+  transform-origin: top; 
+}
 
 
+.cuadro2 h3 p {
+  color: black;  
+  position: relative; 
+  top: 100%;
+  width: 100%;
+  transform-origin: top;
+  text-align: right;
+  transform: rotateX(-90deg); 
+}
 
+/* Efecto sombra */
+.cuadro2 h3::before {
+  content: "";
+  position: absolute; 
+  width: 100%; 
+  height: 100%; 
+  background: black;
+  box-shadow: 0 0 100px 50px rgba(0, 0, 0, 0.45);
+  transition: all 0.5s;
+  opacity: 0.15;
+  transform: rotateX(95deg) translateZ(50px) scale(0.75);  
+  transform-origin: bottom; 
+}
 
+.cuadro2:hover h3::before {
+  opacity: 0.5;
+  box-shadow: 0 0 25px 25px #9c9c9c;
+  transform: translateZ(-150px) scale(0.9); 
+}
 
+/***** Banner tipo 3 *****/
+.cuadro3 {
+  width: 90%; 
+  height: 200px;
+  perspective: 800px; 
+  margin: auto;
+  margin-bottom: 10%; 
+  color: white;
+}
 
+.cuadro3 h3 {
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+  width: 40%;
+  height: 100%; 
+  transform-style: preserve-3d; 
+  transition: all 0.5s; 
+}
 
+/* Rotación del h3 (imagen y texto) */
+.cuadro3:hover h3 {
+  transform: rotateX(65deg);
+  transform-origin: top; 
+    width: 90%;
+}
 
+.cuadro3 h3 p {
+  color: black;  
+  position: relative; 
+  top: 100%;
+  width: 100%;
+  transform-origin: top;
+  text-align: right;
+  transform: rotateX(-90deg); 
+}
 
+/* Efecto sombra */
+.cuadro3 h3::before {
+  content: "";
+  position: absolute; 
+  width: 100%; 
+  height: 100%; 
+  background: black;
+  box-shadow: 0 0 100px 50px rgba(0, 0, 0, 0.45);
+  transition: all 0.5s;
+  opacity: 0.15;
+  transform: rotateX(95deg) translateZ(-50px) scale(0.75);  
+  transform-origin: bottom; 
+}
+
+.cuadro3:hover h3::before {
+  opacity: 0.5;
+  box-shadow: 0 0 25px 25px #9c9c9c;
+  transform: translateZ(-150px) scale(0.9); 
+}
+/********************* COMPONENTE BANNER *********************/
